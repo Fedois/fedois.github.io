@@ -1,0 +1,10 @@
+
+/* KEYFRAMES */
+@keyframes reveal{
+	0% {
+		transform: translate(0,100%);
+	}
+	100% {
+		transform: translate(0,0);
+	}
+}

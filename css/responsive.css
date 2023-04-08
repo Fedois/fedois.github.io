@@ -1,0 +1,119 @@
+/* MEDIAQUERY */
+/* desktop -> tablet */
+@media screen and (max-width: 992px){
+    /* about-me */
+    #about-me .container {
+        display: block !important;
+    }
+    #about-me .container > div{
+        width: 100% !important;
+        text-align: center;
+    }
+    #about-me h2{
+        padding-bottom: 2rem;
+    }
+    .photo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    /* Projects */
+    .card-proj{
+        height: 350px;
+    }
+}
+
+/* tablet -> small tablet */
+@media screen and (max-width: 768px){
+    /* header */
+    .header-fixed{
+        justify-content: end;
+    }
+    .navigation{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .navigation ul{
+        display: none;
+    }
+    .menu{
+        display: block;
+        margin: 0 40px;
+    }
+    .menu :hover{
+        cursor: pointer;
+    }
+    .dark-mode{
+        top: 0;
+        right: 0;
+    }
+    /* jumbotron */
+    .titles{
+        width: 60% !important;
+    }
+    .titles h1{
+        font-size: 3.2em !important;
+    }
+    .titles h2{
+        font-size: 1.3em;
+    }
+    /* about-me */
+    .cornice {
+        margin: 40px 60px;
+    }
+
+    /* Projects */
+    .card-proj{
+        height: 250px;
+    }
+    .card-proj h3{
+        font-size: 1em;
+    }
+    .card-proj p{
+        font-size: 0.8em;
+    }
+}
+
+/* small tablet -> phone */
+@media screen and (max-width: 576px){
+    /* about me */
+    .cornice{
+        width: 250px;
+        height: 350px;
+    }
+    /* projects */
+    .card-proj p {
+        font-size: 0.7em;
+    }
+    /* footer*/
+    .signature p, .contact-me > *{
+        font-size: 0.8em;
+    }
+    footer a {
+        margin: 0;
+    }
+    footer ul {
+        text-align: end;
+    }
+    
+}
+/* small phone -> extra small phone */
+@media screen and (max-width: 450px){
+    /* projects */
+    .card-proj{
+        height: 200px;
+    }
+    .info{
+        overflow: auto;
+    }
+    .card-proj a{
+        padding: 2px !important;
+        font-size: 0.8em;
+    }
+    .card-proj p {
+        font-size: 0.8em;
+    }
+    
+}

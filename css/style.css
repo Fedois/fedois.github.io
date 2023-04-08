@@ -1,0 +1,182 @@
+/* GENERAL */
+*{
+    font-family: 'Quicksand', sans-serif;
+    scroll-margin: 40px;
+    transition: all 0.2s;
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+main section{
+    padding: 100px 0;
+}
+img{
+    object-fit: cover;
+}
+li{
+    list-style: none;
+}
+.git a, .curriculum a{
+    color: black !important;
+    border: 1px solid black;
+    font-size: 1.5em;
+    transition: all 0.2s;
+}
+.git a:hover, .curriculum a:hover{
+    cursor: pointer;
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid white;
+}
+
+/* HEADER */
+header{
+    background-image: url('../img/backgroundJumbo.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+/* header fixed */
+.header-fixed{
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.navigation .link-page{
+    color: white !important;
+}
+.navigation li{
+    font-weight: bold;
+    transition: all 0.2s;
+}
+.navigation li:hover{
+    transform: scale(1.1);
+}
+.dark-mode{
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: -50%;
+    right: 0;
+}
+.dark-mode:hover{
+    cursor: pointer;
+}
+.sun{
+    display: none;
+}
+.menu{
+    display: none;
+}
+.menu .btn{
+    color: white;
+    border: 1px solid white;
+}
+/* jumbotron */
+#jumbotron{
+    height: 700px;
+}
+#jumbotron h1{
+    font-size: 4em;
+}
+.my-name h1, .my-name h2{
+    transition: all 0.2s;
+	animation: reveal 1s ease forwards;
+    color: white;
+}
+.socials-jumbo a{
+    display: inline-block;
+	border: 2px solid white;
+    margin-bottom: 1rem;
+    color: white !important;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    transition: all 0s !important;
+    transition: border 0.2s !important;
+    animation: reveal 1s ease forwards;
+}
+.socials-jumbo a:hover{
+	background-color: white;
+    color: black !important;
+    transform: scale(1.2);
+}
+.cover-jumbo{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MAIN */
+.shadow-top{
+    height: 1px;
+    width: 100%;
+}
+.direction{
+    height: 50px;
+    width: 100%;
+}
+.direction a{
+    color: black !important;
+    top: -50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 1rem;
+    border-radius: 10px 10px 0 0;
+    animation: reveal 1s linear forwards;
+}
+/* about me */
+.cornice{
+    border: 5px solid black;
+    width: 400px;
+    height: 500px;
+}
+.ph-img{
+   bottom: 10%;
+   left: 15%; 
+   display: none;
+   animation: reveal 1s ease forwards;
+}
+.info-me{
+    display: none;
+    animation: reveal 1s linear forwards;
+    color: black !important;
+}
+
+/* projects */
+.card-proj{
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.57);
+    display: none;
+    animation: reveal 1s linear forwards;
+    transition: all 0.2s;
+}
+.card-proj > .info{
+    transition: all 0.2s;
+}
+.card-proj:hover .info{
+    display: block !important;
+    cursor: pointer;
+}
+.card-proj > .info:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.col:hover{
+    transform: scale(1.030);
+}
+
+/* skills */
+.list-tech img{
+    width: 80px;
+}
+
+/* FOOTER */
+footer{
+    background-color: black;
+    border-top: 1px solid white;
+}
+.social{
+    margin-right: 10px;
+}
+
