@@ -102,17 +102,12 @@ header{
 .socials-jumbo a:hover{
 	background-color: white;
     color: black !important;
-    transform: scale(1.2);
 }
 .cover-jumbo{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* MAIN */
-.shadow-top{
-    height: 1px;
-    width: 100%;
-}
 .direction{
     height: 50px;
     width: 100%;
@@ -134,22 +129,19 @@ header{
 .ph-img{
    bottom: 10%;
    left: 15%; 
-   display: none;
-   animation: reveal 1s ease forwards;
 }
 .info-me{
-    display: none;
-    animation: reveal 1s linear forwards;
     color: black !important;
 }
 
 /* projects */
+.my-pointer{
+    display: none;
+}
 .card-proj{
     height: 300px;
     overflow: hidden;
     box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.57);
-    display: none;
-    animation: reveal 1s linear forwards;
     transition: all 0.2s;
 }
 .card-proj > .info{

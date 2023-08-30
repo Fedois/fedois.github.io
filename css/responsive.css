@@ -19,6 +19,9 @@
     }
 
     /* Projects */
+    .my-pointer{
+        display: block !important;
+    }
     .card-proj{
         height: 350px;
     }
