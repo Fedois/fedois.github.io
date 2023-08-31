@@ -23,7 +23,7 @@ li{
     font-size: 1.5em;
     transition: all 0.2s;
 }
-.git a:hover, .curriculum a:hover{
+.git a:hover, .curriculum a:hover, .mini-git{
     cursor: pointer;
     background-color: black !important;
     color: white !important;
@@ -108,6 +108,9 @@ header{
 }
 
 /* MAIN */
+main{
+    background-color: white;
+}
 .direction{
     height: 50px;
     width: 100%;
