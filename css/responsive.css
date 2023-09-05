@@ -1,60 +1,92 @@
 /* MEDIAQUERY */
+@media screen and (max-width: 1200px){
+   /* about-me */
+.header-links{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0 !important;
+    margin: 10px 0 !important;
+}
+.header-links ul{
+    flex-direction: initial;
+}
+.header-links ul li{
+    margin: 0 15px !important;
+}
+#about-me .container {
+    display: block !important;
+}
+#about-me .container > div{
+    width: 100% !important;
+    text-align: center;
+}
+#about-me h2{
+    padding-bottom: 2rem;
+}
+.photo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+}
 /* desktop -> tablet */
 @media screen and (max-width: 992px){
-    /* about-me */
-    #about-me .container {
-        display: block !important;
+    /* jumbotron  */
+    .my-name{
+        font-size: 12px;
     }
-    #about-me .container > div{
-        width: 100% !important;
-        text-align: center;
+    .photo-jumbo{
+        margin-left: 15px;
     }
-    #about-me h2{
-        padding-bottom: 2rem;
+    .social {
+        font-size: 15px;
     }
-    .photo{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 2rem;
+    .photo-jumbo{
+        width: 300px;
+        height: 300px;
+    }
+    /* about me */
+    .cornice{
+        width: 400px;
+        height: 400px;
     }
 
     /* Projects */
     .my-pointer{
         display: block !important;
     }
-    .card-proj{
+    .img-proj{
         height: 350px;
     }
 }
 
 /* tablet -> small tablet */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 769px){
     /* header */
-    .header-fixed{
-        justify-content: end;
-    }
-    .navigation{
-        display: flex;
-        justify-content: end;
+    /* .header-links a{
+        font-size: 5px !important;
+    } */
+    /* jumbotron */
+    .jumbo-content{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
         align-items: center;
     }
-    .navigation ul{
-        display: none;
+    .photo-jumbo{
+        width: 200px;
+        height: 200px;
+        margin: 1rem 0;
     }
-    .menu{
-        display: block;
-        margin: 0 40px;
+    .socials-jumbo{
+        text-align: center;
     }
-    .menu :hover{
-        cursor: pointer;
+    .my-name{
+        font-size: 10px;
     }
-    .dark-mode{
-        top: 0;
-        right: 0;
-    }
-    /* jumbotron */
     .titles{
-        width: 60% !important;
+        width: 50% !important;
     }
     .titles h1{
         font-size: 3.2em !important;
@@ -62,13 +94,9 @@
     .titles h2{
         font-size: 1.3em;
     }
-    /* about-me */
-    .cornice {
-        margin: 40px 60px;
-    }
 
     /* Projects */
-    .card-proj{
+    .img-proj{
         height: 250px;
     }
     .card-proj h3{
@@ -77,14 +105,22 @@
     .card-proj p{
         font-size: 0.8em;
     }
+
+    /* skills */
+    .content-tech{
+        display: block;
+    }
+    .content-tech > div{
+        width: 100% !important;
+    }
 }
 
 /* small tablet -> phone */
 @media screen and (max-width: 576px){
     /* about me */
     .cornice{
-        width: 250px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
     /* projects */
     .card-proj p {
@@ -104,8 +140,19 @@
 }
 /* small phone -> extra small phone */
 @media screen and (max-width: 450px){
+    /* header */
+    .header-links ul li{
+        margin: 0 5px !important;
+    }
+    /* about-me */
+    .my-experiences {
+        display: block;
+    }
+    .my-experiences > div {
+        width: 100% !important;
+    }
     /* projects */
-    .card-proj{
+    .img-proj{
         height: 200px;
     }
     .info{

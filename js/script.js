@@ -1,8 +1,10 @@
 
 // componenti html utilizzabili da tutti gli scoped
-const header = document.querySelector('.header-fixed');
+const header = document.querySelector('.header-links');
+const navigation = document.querySelector('.navigation > ul')
 const info = document.querySelector('.info-me');
 const socials = document.querySelectorAll('.socials-jumbo a');
+const root = document.documentElement
 let changeColor = false;
 
 // impostazioni scroll di default
@@ -13,149 +15,65 @@ document.addEventListener('scroll', function(){
     const menu = document.querySelector('.btn');
     const photo = document.querySelector('.ph-img');
     const projects = document.querySelectorAll('.card-proj');
+    const nameHeader = document.querySelector('.header-fixed h4')
 
-    // inizializzazione scroll
-    if(scroll > 400){
-        localStorage.setItem('scroll', '400')
-        // animazione header fixed
-        header.style.background = 'white';
-        header.style.boxShadow = '5px 5px 10px -10px #000000';
-        for (let i = 0; i < link.length; i++) {
-            link[i].style.setProperty('color', 'black', 'important');
+    // change color navigation
+    if(changeColor == false){
+        if(scroll > 500){
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.setProperty('color', 'var(--blue)', 'important');
+            }
+            root.style.setProperty('--bg-blur', 'rgba(34, 79, 170, 0.2)')
+            
+        } else{
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.setProperty('color', 'white', 'important');
+            }
+            root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
         }
-        menu.style.color = 'black';
-    }
-    else{
-        localStorage.setItem('scroll', '0')
-        header.style.background = 'rgba(0, 0, 0, 0.2)'
-        header.style.boxShadow = '0px 0px 0px 0px';
-        for (let i = 0; i < link.length; i++) {
-            link[i].style.setProperty('color', 'white', 'important');
-        }
-        menu.style.color = 'white';
-    }
-    // animazione about me e progetti
-    if (scroll > 500){
-        photo.style.animation = 'reveal 1s ease forwards;';
-        animation = 'reveal 1s ease forwards;'
-    }
-    if (scroll > 1200){
-        for (let i = 0; i < projects.length; i++) {
-            projects[i].style.animation = 'reveal 1s ease forwards;';
+    } else{
+        if(scroll > 500){
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.setProperty('color', 'var(--text)', 'important');
+            }
+            root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
+            
+        } else{
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.setProperty('color', 'var(--secondary)', 'important');
+            }
+            root.style.setProperty('--bg-blur', 'rgba(1, 1, 26, 0.2)')
         }
     }
 })
 
-// bottone per attivare la dark-mode
-const button = document.querySelector('.dark-mode');
-button.addEventListener('click', function(){
-    // imposta TEMA CHIARO
+// cambia icona dark mode
+
+document.querySelector('.dark-mode').addEventListener('click', function(){
+    changeColor = changeColor == true ? false : true
     if(changeColor == true){
-        changeColor = false;
-        localStorage.setItem('dark-mode', 'true')
-        changeTheme('white', 'black', 'rgba(0, 0, 0, 0.5)', 'rgba(255, 255, 255, 0.5)', '5px 5px 14px 0px rgba(0,0,0,0.57)', changeColor)
-    }
-    // imposta TEMA SCURO
-    else{
-        changeColor = true;
-        localStorage.setItem('dark-mode', 'false')
-        changeTheme('rgb(19, 19, 19)', 'white', 'rgba(255, 255, 255, 0.3)', 'rgba(0, 0, 0, 0.5)', '2px 2px 5px 0px white', changeColor)
+        root.style.setProperty('--secondary', 'rgb(1, 1, 26)');
+        root.style.setProperty('--text', 'white');
+        root.style.setProperty('--border-color', '#888888');
+        document.querySelector('.photo-jumbo').src='img/bgMeJumboDark.png'
+        root.style.setProperty('--bg-blur', 'rgba(1, 1, 26, 0.2)');
+        root.style.setProperty('--bg-blur-arr', 'rgba(1, 1, 26, 0.2)');
+        document.querySelector('.dark-mode i:first-child').style.display = 'none'
+        document.querySelector('.dark-mode i:last-child').style.display = 'block'
+        root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
+    } else{
+        root.style.setProperty('--secondary', 'white');
+        root.style.setProperty('--text', 'rgb(25, 25, 25)');
+        root.style.setProperty('--border-color', 'rgb(134, 133, 133)');
+        document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png'
+        root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)');
+        root.style.setProperty('--bg-blur-arr', 'rgba(255, 255, 255, 0.2)');
+        document.querySelector('.dark-mode i:first-child').style.display = 'block'
+        document.querySelector('.dark-mode i:last-child').style.display = 'none'
+        root.style.setProperty('--shadow', '0px 2px 14px 5px rgba(0,0,0,0.18)');
     }
 })
+console.log(changeColor)
+
 
 // FUNZIONI
-function changeTheme(color1, color2, coverColor, bgArrow, projShadow, black = 'black', changeColor){
-    // componenti html per le impostazioni di dark-mode
-    const iconSun = document.querySelector('.sun');
-    const iconMoon = document.querySelector('.moon');
-    const title = document.querySelectorAll('.my-name > *');
-    const cover = document.querySelector('.cover-jumbo')
-    const socials = document.querySelectorAll('.socials-jumbo a');
-    const main = document.querySelector('main');
-    const arrow = document.querySelector('.direction a');
-    const cornice = document.querySelector('.cornice');
-    const link = document.querySelectorAll('.link-page');
-    const menu = document.querySelector('.btn');
-    const projects = document.querySelectorAll('.card-proj');
-
-    // cambio icona e colori dark-mode
-    if(iconSun.style.display == 'block'){
-        iconSun.style.display = 'none'
-        iconMoon.style.display = 'inline-block';
-    } else{
-        iconSun.style.display = 'block'
-        iconMoon.style.display = 'none';
-    }
-    
-    button.style.backgroundColor = color1;
-    button.style.color = color2
-    
-    // cambio colori
-    if(parseInt(localStorage.getItem('scroll')) >= 400 ){
-        header.style.background = color1;
-        header.style.boxShadow = `5px 5px 10px -10px ${color2}`;
-        for (let i = 0; i < link.length; i++) {
-            link[i].style.setProperty('color', color2, 'important');
-        }
-        menu.style.color = color2;
-    } else {
-        header.style.background = 'rgba(0, 0, 0, 0.2)'
-        header.style.boxShadow = '0px 0px 0px 0px';
-        for (let i = 0; i < link.length; i++) {
-            link[i].style.setProperty('color', color1, 'important');
-        }
-        menu.style.color = color1;
-    }
-
-    for (let i = 0; i < title.length; i++) {
-        title[i].style.setProperty('color', color1, 'important');
-    }
-    console.log(localStorage)
-    let important = localStorage.getItem('dark-mode') == 'true' ? '' : 'important'
-    for (let i = 0; i < socials.length; i++) {
-        socials[i].style.setProperty('color', color1, important);
-        socials[i].style.border = `2px solid ${color1}`;
-        socials[i].style.fontWeight = 'bold'
-    }
-    cover.style.backgroundColor = coverColor;
-    main.style.backgroundColor = color1;
-    main.style.color = color2
-    arrow.style.color = color1;
-    arrow.style.backgroundColor = bgArrow;
-    arrow.style.setProperty('color', color2, 'important');
-    info.style.setProperty('color', color2, 'important');
-    cornice.style.border = `5px solid ${color2}`;
-    for (let i = 0; i < projects.length; i++) {
-        projects[i].style.boxShadow = projShadow;
-    }
-
-    // impostazioni scroll della pagina tema chiaro
-    document.addEventListener('scroll', function(){
-        
-        // componenti html
-        let scroll = window.scrollY;
-        const link = document.querySelectorAll('.link-page');
-        const menu = document.querySelector('.btn');
-        const photo = document.querySelector('.ph-img');
-        const projects = document.querySelectorAll('.card-proj');
-        
-        // inizializzazione scroll
-        if(scroll > 400){
-            // animazione header fixed
-            header.style.background = color1;
-            header.style.boxShadow = '5px 5px 10px -10px #000000';
-            for (let i = 0; i < link.length; i++) {
-                link[i].style.setProperty('color', color2, 'important');
-            }
-            menu.style.color = color2;
-        }
-        else{
-            header.style.background = 'rgba(0, 0, 0, 0.2)'
-            header.style.boxShadow = '0px 0px 0px 0px';
-            for (let i = 0; i < link.length; i++) {
-                link[i].style.setProperty('color', color1, 'important');
-            }
-            menu.style.color = color1;
-        }
-    })
-}

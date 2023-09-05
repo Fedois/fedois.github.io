@@ -1,15 +1,32 @@
 /* GENERAL */
+:root{
+    --primary: rgb(34, 79, 170);
+    --text: rgb(25, 25, 25);
+    --secondary: white;
+    --border-color: rgb(134, 133, 133);
+    --bg-blur: rgba(255, 255, 255, 0.2);
+    --bg-blur-arr: rgba(255, 255, 255, 0.2);
+    --shadow: 0px 2px 14px 5px rgba(0,0,0,0.18);
+    color: #888888;
+}
 *{
-    font-family: 'Quicksand', sans-serif;
-    scroll-margin: 40px;
+    font-family: 'Poppins', sans-serif;
+    scroll-margin: 150px;
     transition: all 0.2s;
+}
+.border-color{
+    border: 1px solid var(--border-color);
 }
 a{
     text-decoration: none !important;
-    color: black !important;
+    color: var(--text) !important;
 }
 main section{
     padding: 100px 0;
+    scroll-margin-bottom: -300px
+}
+main section > h2{
+    color: var(--primary);
 }
 img{
     object-fit: cover;
@@ -18,160 +35,169 @@ li{
     list-style: none;
 }
 .git a, .curriculum a{
-    color: black !important;
-    border: 1px solid black;
+    border-radius: 5px;
     font-size: 1.5em;
     transition: all 0.2s;
+    color: var(--text) !important;
+    background-color: var(--secondary) !important;
 }
-.git a:hover, .curriculum a:hover, .mini-git{
+.git a:hover, .curriculum a:hover{
     cursor: pointer;
-    background-color: black !important;
-    color: white !important;
-    border: 1px solid white;
+    background-color: var(--primary) !important;
+    color: var(--secondary) !important;
+    box-shadow: var(--shadow);
+}
+.change-border{
+    transition: all 0.2s linear !important;
+}
+.change-border:hover{
+    border: 1px solid var(--primary) !important;
+    box-shadow: var(--shadow);
 }
 
 /* HEADER */
-header{
-    background-image: url('../img/backgroundJumbo.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-/* header fixed */
-.header-fixed{
-    transition: all 0.5s;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 100;
-}
-
-.navigation .link-page{
-    color: white !important;
-}
-.navigation li{
-    font-weight: bold;
-    transition: all 0.2s;
-}
-.navigation li:hover{
-    transform: scale(1.1);
-}
 .dark-mode{
-    color: black;
-    background-color: white;
-    position: absolute;
-    top: -50%;
-    right: 0;
-}
-.dark-mode:hover{
+    z-index: 200;
     cursor: pointer;
 }
-.sun{
+.dark-mode i:last-child{
     display: none;
 }
-.menu{
-    display: none;
+/* header fixed */
+.header-links{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 200;
+    transform: translateY(-50%);
+    background-color: var(--bg-blur);
+    backdrop-filter: blur(20px);
+    margin-left: 10px;
 }
-.menu .btn{
-    color: white;
-    border: 1px solid white;
+nav > ul{
+    display: flex;
+    flex-direction: column;
+}
+.link-page{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    transition: all 0.2s !important;
+    color: var(--secondary)  !important;
+    position: relative;
+    bottom: 0;
+}
+.link-page:hover{
+    bottom: 3px;
 }
 /* jumbotron */
 #jumbotron{
-    height: 700px;
+    height: 100vh;
+    background-color: var(--primary);
 }
 #jumbotron h1{
     font-size: 4em;
 }
+.my-name{
+    transition: 2s all;
+    animation: revealText 2s linear;
+}
 .my-name h1, .my-name h2{
     transition: all 0.2s;
-	animation: reveal 1s ease forwards;
-    color: white;
+    color: var(--secondary) !important;
 }
 .socials-jumbo a{
     display: inline-block;
-	border: 2px solid white;
+	border: 2px solid var(--secondary);
     margin-bottom: 1rem;
-    color: white !important;
+    color: var(--secondary) !important;
     font-weight: bold;
     height: 40px;
     width: 40px;
     line-height: 40px;
     transition: all 0s !important;
     transition: border 0.2s !important;
-    animation: reveal 1s ease forwards;
 }
 .socials-jumbo a:hover{
-	background-color: white;
-    color: black !important;
+	background-color: var(--secondary);
+    color: var(--primary) !important;
 }
-.cover-jumbo{
-    background-color: rgba(0, 0, 0, 0.5);
+.photo-jumbo{
+    border: 2px solid var(--secondary) ;
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+    margin-left: 8rem;
+    animation: revealText 1.5s linear;
 }
 
 /* MAIN */
 main{
-    background-color: white;
+    background-color: var(--secondary);
+    color: var(--text);
 }
 .direction{
     height: 50px;
     width: 100%;
 }
 .direction a{
-    color: black !important;
+    color: var(--secondary) !important;
     top: -50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--bg-blur-arr) !important;
     padding: 0 1rem;
     border-radius: 10px 10px 0 0;
-    animation: reveal 1s linear forwards;
 }
 /* about me */
 .cornice{
-    border: 5px solid black;
-    width: 400px;
-    height: 500px;
-}
-.ph-img{
-   bottom: 10%;
-   left: 15%; 
-}
-.info-me{
-    color: black !important;
+    width: 500px;
+    height: 450px;
 }
 
-/* projects */
-.my-pointer{
-    display: none;
+.my-clouds{
+    display: flex;
 }
-.card-proj{
-    height: 300px;
+/* project */
+.img-proj{
     overflow: hidden;
-    box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.57);
-    transition: all 0.2s;
+    height: 300px;
 }
-.card-proj > .info{
-    transition: all 0.2s;
-}
-.card-proj:hover .info{
-    display: block !important;
+.buttons-proj > a {
     cursor: pointer;
+    border-radius: 5px;
 }
-.card-proj > .info:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+.buttons-proj > a:first-child{
+    color: var(--primary);
 }
-.col:hover{
-    transform: scale(1.030);
+.buttons-proj > a:last-child{
+    background-color: var(--primary);
+    color: var(--secondary) !important;
 }
-
-/* skills */
-.list-tech img{
-    width: 80px;
+.mini-git:hover{
+    border: 1px solid var(--primary) !important;
+    color: var(--secondary) !important;
+    background-color: var(--primary);
+}
+.collapse .card{
+    color: var(--text);
 }
 
 /* FOOTER */
 footer{
-    background-color: black;
-    border-top: 1px solid white;
+    background-color: var(--primary);
+}
+.footer-link{
+    color: var(--text);
+    display: inline-block;
+    padding-bottom: 3px;
+}
+.footer-link:hover{
+    box-shadow: inset 0px -2px 0px 0px var(--primary)
 }
 .social{
     margin-right: 10px;
+}
+.footer-text{
+    color: var(--secondary) !important;
 }
 

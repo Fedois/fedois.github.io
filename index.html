@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +16,7 @@
     <link rel="stylesheet" href="path/to/atropos.css" />
 
     <!-- animations -->
-    <link rel="stylesheet" href="css/keyframes.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,97 +25,72 @@
     <title>FoisPortfolio</title>
 </head>
 <body>
-    <!-- INIZIO header -->
-    <header class="position-relative">
-        <div class="header-fixed d-flex justify-content-center align-items-center p-4 position-fixed w-100">
 
-            <nav class="navigation w-100 text-center position-relative">
+    <div class="dark-mode position-fixed end-0 p-3 text-dark fs-5">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun text-white"></i>
+    </div>
+
+    <div class="header-links p-2 rounded-5">
+        <div class="h-100 w-100">
+            <nav class="navigation" data-aos="fade-down" data-aos-duration="1000">
                 <ul class="m-0 p-0">
-                    <li class="d-inline-block">
-                        <a class="link-page px-5 text-uppercase" href="#jumbotron">home</a>
+                    <li class="my-3">
+                        <a title="home" class="link-page rounded-circle text-center" href="#jumbotron"><i class="fa-solid fa-house"></i></i></a>
                     </li>
-                    <li class="d-inline-block">
-                        <a class="link-page px-5 text-uppercase" href="#about-me">about-me</a>
+                    <li class="my-3">
+                        <a title="about me" class="link-page rounded-circle text-center" href="#about-me"><i class="fa-solid fa-user"></i></a>
                     </li>
-                    <li class="d-inline-block">
-                        <a class="link-page px-5 text-uppercase" href="#projects">projects</a>
+                    <li class="my-3">
+                        <a title="skills" class="link-page rounded-circle text-center" href="#skills"><i class="fa-solid fa-laptop-code"></i></a>
                     </li>
-                    <li class="d-inline-block">
-                        <a class="link-page px-5 text-uppercase" href="#skills">skills</a>
+                    <li class="my-3">
+                        <a title="projects" class="link-page rounded-circle text-center" href="#projects"><i class="fa-regular fa-folder-open"></i></a>
+                    </li>
+                    <li class="my-3">
+                        <a title="contact me" class="link-page rounded-circle text-center" href="#contact-me"><i class="fa-regular fa-paper-plane"></i></a>
                     </li>
                 </ul>
-                
-                <div class="dark-mode py-1 px-2 rounded-5">
-                    <span class="moon">
-                        <i class="fa-solid fa-moon"></i>
-                    </span>
-                    <span class="sun">
-                        <i class="fa-solid fa-sun"></i>
-                    </span>
-                </div>
-
-                <div class="menu text-end">
-                    <div class="dropdown d-inline-block">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="fa-solid fa-bars"></i>
-                        </button>
-                        
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="text-dark px-4 text-uppercase" href="#jumbotron">home</a>
-                            </li>
-                            <li>
-                                <a class="text-dark px-4 text-uppercase" href="#about-me">about-me</a>
-                            </li>
-                            <li>
-                                <a class="text-dark px-4 text-uppercase" href="#projects">projects</a>
-                            </li>
-                            <li>
-                                <a class="text-dark px-4 text-uppercase" href="#skills">skills</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </nav>
-        
         </div>
+    </div>
+    <!-- INIZIO header -->
+    <header class="position-relative" id="home">
 
         <!-- jumbotron -->
-        <section id="jumbotron">
-            <div class="cover-jumbo position-absolute top-0 bottom-0 end-0 start-0">
+        <section id="jumbotron" class="position-relative">
+            <div class="position-fixed w-100 top-50 start-50 translate-middle">
+                <div class="jumbo-content text-center d-flex align-items-center justify-content-center">
+                    <div class="my-name" data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="0">                       
+                        <h2>Ciao, sono</h2>
+                        <h1>Federico Fois</h1>
+                        <h2>web developer</h2>
 
-                <div class="content-jumbo w-75 h-100 d-flex flex-column justify-content-center p-5 position-fixed">
-                    <div class="titles">
-                        <div class="my-name">
-                            <h2>Ciao, sono</h2>
-                            <h1>Federico Fois</h1>
-                            <h2>e sono un full stack web developer</h2>
-                        </div>
-                        
-                        <!-- link social -->
                         <div class="socials-jumbo">
                             <ul class="mt-3 p-0 position-relative">
-                                <li class="d-inline-block">
-                                    <a class="social me-3 rounded-circle text-center align-center" href="https://github.com/Fedois" target="_blank">
+                                <li class="d-inline-block mx-1" >
+                                    <a class="social m-0 rounded-circle align-center" href="https://github.com/Fedois" target="_blank">
                                         <i class="fa-brands fa-github"></i>
                                     </a>
                                 </li>
-                                <li class="d-inline-block">
-                                    <a class="social me-3 rounded-circle text-center align-center" href="https://www.instagram.com/fedois_/" target="_blank">
+                                <li class="d-inline-block mx-1">
+                                    <a class="social m-0 rounded-circle align-center" href="https://www.instagram.com/fedois_/" target="_blank">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
-                                <li class="d-inline-block">
-                                    <a class="social me-3 rounded-circle text-center align-center" href="https://www.linkedin.com/in/federicofois" target="_blank">
+                                <li class="d-inline-block mx-1">
+                                    <a class="social m-0 rounded-circle align-center" href="https://www.linkedin.com/in/federicofois" target="_blank">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
 
+                    <div data-aos="fade-down" data-aos-duration="1000">
+                        <img class="photo-jumbo rounded-circle object-fit-cover" src="img/bgMeJumbo.png" alt="">
+                    </div>
+                </div>
             </div>
         </section>
     </header>
@@ -134,18 +108,38 @@
             </div>
 
             <!-- sezione 1: about me -->
-            <section id="about-me">
-                <h2 class="text-center mb-5">ABOUT ME</h2>
+            <section id="about-me" class="reveal">
+                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-5" >ABOUT ME</h2>
 
-                <div class="container d-flex align-items-center">
-                    <div class="photo w-50 text-center">
-                        <div class="cornice position-relative mt-5">
-                            <img class="ph-img w-100 h-100 position-absolute" src="img/IMG_6196.PNG" alt="">
+                <div class="container d-flex align-items-center" >
+                    <div class="photo w-50 text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="cornice rounded-4 overflow-hidden">
+                            <img class="ph-img w-100 h-100" src="img/IMG_6196.PNG" alt="">
                         </div>
                     </div>
         
                     <div class="info-me w-50">
-                        <p class="fs-5">
+                        <div class="mb-3 my-clouds my-experiences" data-aos="fade-up" data-aos-duration="1000" >
+                            <div class="w-50 p-3 text-center">
+                                <div class="rounded-4 change-border border-color py-3">
+                                    <p class="m-0"><i class="fa-solid fa-award"></i></p>
+                                    <p class="m-0"><strong>Esperienza</strong></p>
+                                    <p class="m-0">1+ anni</p>
+                                    <p class="m-0">full-stack developer</p>
+                                </div>
+                            </div>
+
+                            <div class="w-50 p-3 text-center"  data-aos="fade-up" data-aos-duration="1000" >
+                                <div class="rounded-4 change-border border-color py-3">
+                                    <p class="m-0"><i class="fa-solid fa-graduation-cap"></i></p>
+                                    <p class="m-0"><strong>Educazione</strong></p>
+                                    <p class="m-0">Boolean careers</p>
+                                    <p class="m-0">Engim srl</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <p class="fs-5" data-aos="fade-up" data-aos-duration="1000" >
                             Ciao, sono Federico, un Fullstack Developer con una
                             grande passione per la programmazione web. Ho
                             imparato le basi come autodidatta e ho continuato a
@@ -160,38 +154,109 @@
                             a crescere come professionista e di essere sempre
                             aggiornato.
                         </p>
-
-                        <!-- scarica CV -->
-                        <div class="curriculum mt-5">
-                            <a href="https://drive.google.com/file/d/1A_UukjLGrryP4XPfabVf-A3WPzm6M9Wu/view?usp=share_link" class="bg-white p-2">
-                                download CV
-                            </a>
-                        </div>
                     </div>
+                </div>
+                 <!-- scarica CV -->
+                 <div class="curriculum mt-5 text-center">
+                    <a href="https://drive.google.com/file/d/1A_UukjLGrryP4XPfabVf-A3WPzm6M9Wu/view?usp=share_link" class="border-color px-3 py-2">
+                        download CV
+                    </a>
                 </div>
             </section>
 
-            <!-- sezione 3: projects -->
-            <section id="projects">
-                <h2 class="text-center mb-5">MY PROJECTS</h2>
-                <p class="text-center my-pointer">
-                    Scopri di più
-                    <br>
-                    <i class="fa-solid fa-hand-point-down"></i>
-                </p>
+             <!-- sezione 3: skills -->
+        <section id="skills" class=" reveal">
+            <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-3" >MY SKILLS</h2>
+
+            <div class="container">
+                <div class="mb-3 my-clouds content-tech">
+                    <div class="w-50 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="rounded-5 border-color change-border py-3" >
+                            <h4>Front-end</h4>
+                            <div class="list-languages">
+                                <div class="container">
+                                    <div class="row row-cols-2">
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> HTML</strong> <em class="d-block text-secondary">autodidatta</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> CSS</strong><em class="d-block text-secondary">autodidatta</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> JavaScript</strong><em class="d-block text-secondary">autodidatta/Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> SASS</strong><em class="d-block text-secondary">Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> jQuery</strong><em class="d-block text-secondary">Engim srl</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Vue.js</strong><em class="d-block text-secondary">Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Tailwind CSS</strong><em class="d-block text-secondary">Autodidatta</em></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-50 p-3 text-center" data-aos="fade-up" data-aos-duration="1000" >
+                        <div class="rounded-5 border-color change-border py-3">
+                            <h4>Back-end</h4>
+                            <div class="list-languages">
+                                <div class="container">
+                                    <div class="row row-cols-2">
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> PHP</strong> <em class="d-block text-secondary">Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Laravel</strong><em class="d-block text-secondary">Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Node.js</strong><em class="d-block text-secondary">Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> MySQL</strong><em class="d-block text-secondary">Boolean</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Ruby</strong><em class="d-block text-secondary">Engim srl</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Ruby on Rails</strong><em class="d-block text-secondary">Engim srl</em></div>
+                                      </div>
+                                      <div class="col">
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> MariaDB</strong><em class="d-block text-secondary">Engim srl</em></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="list-tech"> -->
+            </div>
+        </section>
+
+            <!-- sezione 4: projects -->
+            <section id="projects" class="reveal">
+                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-5" >MY PROJECTS</h2>
                 
                 <div class="container">
                     <div class="row g-3 row-cols-1 row-cols-lg-2 justify-content-center">
-                        
-                        <!-- tutte le carte -->
-                        <div class="col mb-3">
-                            <div class="card-proj">
-                                <img src="img/agency.png" class="h-100 w-100" alt="">
-
-                                <div class="info p-3 position-absolute top-0 bottom-0 end-0 start-0 d-none text-white">
-                                    <h3>Agency</h3>
-
-                                    <p>
+                        <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="content-proj change-border border-color p-4 rounded-4"  >
+                                <h3 class="mb-3">Agency</h3>
+                                <div class="img-proj border-color rounded-4"> <img src="img/agency.png" class="h-100 w-100" alt=""></div>
+                                <div class="buttons-proj mt-4">
+                                    <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/proj-html-vuejs">view github</a>
+                                    <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
+                                </div>
+                                <div class="collapse" id="collapseExample1">
+                                    <div class="card bg-transparent card-body border-0">
+                                    <p class="m-0">
                                         progetto
                                         di simulazione di creazione di un sito
                                         web per un cliente, utilizzando un
@@ -206,178 +271,182 @@
                                         velocità di caricamento della pagina e
                                         una migliore esperienza utente.
                                     </p>
-
-                                    <div class="h-100 w-100">
-                                        <a href="https://github.com/Fedois/proj-html-vuejs" target="_blank" class="bg-white p-2">view on GitHub</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col mb-3">
-                            <div class="card-proj position-relative">
-                                <img src="img/netflix.png" class="h-100 w-100" alt="">
-
-                                <div class="info p-3 position-absolute top-0 bottom-0 end-0 start-0 d-none text-white">
-                                    <h3>Netflix</h3>
-
-                                    <p>
-                                        creazione di
-                                        una piattaforma di streaming video
-                                        simile a Netflix, concentrandoci
-                                        sull'utilizzo di chiamate Axios per
-                                        recuperare i dati dei film/serie-TV dal server
-                                        remoto. Ho
-                                        utilizzato tecnologie avanzate come
-                                        HTML5, CSS3, JavaScript, Axios, Vue.js
-                                        e Node.js per creare una piattaforma
-                                        reattiva, scalabile e sicura.
-                                    </p>
-
-                                    <div class="h-100 w-100">
-                                        <a href="https://github.com/Fedois/vite-boolflix" target="_blank" class="bg-white p-2">view on GitHub</a>
+                        <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="content-proj change-border border-color p-4 rounded-4"  >
+                                <h3 class="mb-3">Booking</h3>
+                                <div class="img-proj border-color rounded-4"> <img src="img/boolbnb.png"  class="h-100 w-100" alt=""></div>
+                                <div class="buttons-proj mt-4">
+                                    <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Chiaravalle04/boolbnb_be">view github</a>
+                                    <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
+                                </div>
+                                <div class="collapse" id="collapseExample5">
+                                    <div class="card bg-transparent card-body border-0">
+                                        <p class="m-0">
+                                            Replica di un sistema di 
+                                            prenotazione con la collaborazione di un
+                                            team di programmatori, con l'obiettivo di creare 
+                                            una piattaforma web che consentisse agli utenti di 
+                                            prenotare servizi o risorse in modo efficiente e intuitivo. 
+                                            La parte backend è stata sviluppata utilizzando Laravel, 
+                                            un framework PHP robusto e flessibile, mentre la parte 
+                                            frontend è stata realizzata con Vue.js, un framework 
+                                            JavaScript progressivo.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col mb-3">
-                            <div class="card-proj position-relative">
-                                <img src="img/whatsapp.png" class="h-100 w-100" alt="">
-
-                                <div class="info p-3 position-absolute top-0 bottom-0 end-0 start-0 d-none text-white">
-                                    <h3>Whatsapp</h3>
-
-                                    <p>
-                                        Rreplica
-                                        del sito di WhatsApp utilizzando HTML5,
-                                        CSS3, JavaScript e i framework Bootstrap
-                                        e Vue.js. Durante il progetto, ho creato
-                                        un sito web interattivo e reattivo, con
-                                        un design funzionale. Ho
-                                        utilizzato il framework Bootstrap per
-                                        semplificare lo sviluppo del layout del
-                                        sito e garantire una maggiore coerenza
-                                        tra le pagine. Inoltre, ho utilizzato
-                                        Vue.js per gestire in modo efficiente lo
-                                        stato dell'applicazione e fornire una
-                                        migliore esperienza utente.
-                                    </p>
-
-                                    <div class="h-100 w-100">
-                                        <a href="https://github.com/Fedois/vue-boolzapp" target="_blank" class="bg-white p-2">view on GitHub</a>
+                        <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="content-proj change-border border-color p-4 rounded-4"  >
+                                <h3 class="mb-3">Netflix</h3>
+                                <div class="img-proj border-color rounded-4"> <img src="img/netflix.png" class="h-100 w-100" alt=""></div>
+                                <div class="buttons-proj mt-4">
+                                    <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/vite-boolflix">view github</a>
+                                    <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
+                                </div>
+                                <div class="collapse" id="collapseExample2">
+                                    <div class="card bg-transparent card-body border-0">
+                                        <p class="m-0">
+                                            creazione di
+                                            una piattaforma di streaming video
+                                            simile a Netflix, concentrandoci
+                                            sull'utilizzo di chiamate Axios per
+                                            recuperare i dati dei film/serie-TV dal server
+                                            remoto. Ho
+                                            utilizzato tecnologie avanzate come
+                                            HTML5, CSS3, JavaScript, Axios, Vue.js
+                                            e Node.js per creare una piattaforma
+                                            reattiva, scalabile e sicura.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col mb-3">
-                            <div class="card-proj position-relative">
-                                <img src="img/spotify.png" class="h-100 w-100" alt="">
-
-                                <div class="info p-3 position-absolute top-0 bottom-0 end-0 start-0 d-none text-white">
-                                    <h3>Spotify</h3>
-
-                                    <p>
-                                        replicato il
-                                        sito web di Spotify utilizzando HTML5 e
-                                        CSS3, con particolare attenzione alla
-                                        progettazione di una versione responsive
-                                        per desktop e tablet. Ho utilizzato
-                                        tecniche avanzate di CSS3 come media
-                                        queries e grid layout per garantire un
-                                        layout fluido e facile da usare su
-                                        schermi di diverse dimensioni.
-                                    </p>
-
-                                    <div class="h-100 w-100">
-                                        <a href="https://github.com/Fedois/html-css-spotifyweb" target="_blank" class="bg-white p-2">view on GitHub</a>
+                        <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="content-proj change-border border-color p-4 rounded-4"  >
+                                <h3 class="mb-3">WhatsApp</h3>
+                                <div class="img-proj border-color rounded-4"> <img src="img/whatsapp.png"  class="h-100 w-100" alt=""></div>
+                                <div class="buttons-proj mt-4">
+                                    <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/vue-boolzapp">view github</a>
+                                    <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
+                                </div>
+                                <div class="collapse" id="collapseExample3">
+                                    <div class="card bg-transparent card-body border-0">
+                                        <p class="m-0">
+                                            Rreplica
+                                            del sito di WhatsApp utilizzando HTML5,
+                                            CSS3, JavaScript e i framework Bootstrap
+                                            e Vue.js. Durante il progetto, ho creato
+                                            un sito web interattivo e reattivo, con
+                                            un design funzionale. Ho
+                                            utilizzato il framework Bootstrap per
+                                            semplificare lo sviluppo del layout del
+                                            sito e garantire una maggiore coerenza
+                                            tra le pagine. Inoltre, ho utilizzato
+                                            Vue.js per gestire in modo efficiente lo
+                                            stato dell'applicazione e fornire una
+                                            migliore esperienza utente.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col mb-3">
-                            <div class="card-proj position-relative">
-                                <img src="img/dropbox.png" class="h-100 w-100" alt="">
-
-                                <div class="info p-3 position-absolute top-0 bottom-0 end-0 start-0 d-none text-white">
-                                    <h3>Dropbox</h3>
-
-                                    <p>
-                                        Primo progetto realizzato da me. 
-                                        Ovvero la replica del sito web di Dropbox
-                                        utilizzando HTML5 e CSS3 cercando di
-                                        curare il più possibile l'interfaccia
-                                        rendendola quasi uguale al sito vero.
-                                        durante il progetto, ho avuto il primo
-                                        approccio con le animazioni usando l'hover
-                                        nei bottoni e link.
-                                    </p>
-
-                                    <div class="w-100 h-100">
-                                        <a href="https://github.com/Fedois/htmlcss-dropbox" target="_blank" class="bg-white p-2">view on GitHub</a>
+                        <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="content-proj change-border border-color p-4 rounded-4" >
+                                <h3 class="mb-3">Spotify</h3>
+                                <div class="img-proj border-color rounded-4"> <img src="img/spotify.png"  class="h-100 w-100" alt=""></div>
+                                <div class="buttons-proj mt-4">
+                                    <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/html-css-spotifyweb">view github</a>
+                                    <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
+                                </div>
+                                <div class="collapse" id="collapseExample4">
+                                    <div class="card bg-transparent card-body border-0">
+                                        <p class="m-0">
+                                            replicato il
+                                            sito web di Spotify utilizzando HTML5 e
+                                            CSS3, con particolare attenzione alla
+                                            progettazione di una versione responsive
+                                            per desktop e tablet. Ho utilizzato
+                                            tecniche avanzate di CSS3 come media
+                                            queries e grid layout per garantire un
+                                            layout fluido e facile da usare su
+                                            schermi di diverse dimensioni.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="content-proj change-border border-color p-4 rounded-4"  >
+                                <h3 class="mb-3">Dropbox</h3>
+                                <div class="img-proj border-color rounded-4"> <img src="img/dropbox.png"  class="h-100 w-100" alt=""></div>
+                                <div class="buttons-proj mt-4">
+                                    <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/htmlcss-dropbox">view github</a>
+                                    <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
+                                </div>
+                                <div class="collapse" id="collapseExample5">
+                                    <div class="card bg-transparent card-body border-0">
+                                        <p class="m-0">
+                                            Primo progetto realizzato da me. 
+                                            Ovvero la replica del sito web di Dropbox
+                                            utilizzando HTML5 e CSS3 cercando di
+                                            curare il più possibile l'interfaccia
+                                            rendendola quasi uguale al sito vero.
+                                            durante il progetto, ho avuto il primo
+                                            approccio con le animazioni usando l'hover
+                                            nei bottoni e link.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="git h-100 w-100 text-center mt-5">
-                    <a href="https://github.com/Fedois" target="_blank" class="bg-white p-2">view GitHub</a>
+                    <a href="https://github.com/Fedois" target="_blank" class="border-color px-3 py-2">view GitHub</a>
                 </div>
             </section>
         </div>
 
-        <!-- sezione 4: skills -->
-        <section id="skills" class="position-relative">
-            <h2 class="text-center mb-5">MY SKILLS</h2>
+       
+        <!-- sezione 5: contact me -->
+        <section id="contact-me" class="reveal">
+            <h2 class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">CONTACT ME</h2>
 
-            <div class="container">
-                <div class="list-tech">
-                    <h4>Frontend:</h4>
-                    <ul class="py-3 position-relative">
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" />
-                        </li>
-                    </ul>
-
-                    <h4>Backend:</h4>
-                    <ul class="py-3">
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg" />
-                        </li>
-                        <li class="d-inline-block p-3">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-plain-wordmark.svg" />
-                        </li>
-                    </ul>
+            <div class="text-center pb-5">
+                <div class="border-color rounded-5 d-inline-block p-3" data-aos="fade-up" data-aos-duration="1000">
+                    <p class="d-inline-block me-3 mb-0"><a href="mailto:fedefox14@gmail.com" target="_blank" class="footer-link"><i class="fa-solid fa-envelope pe-1"></i> Fedefox14@gmail.com</a></p>
+                    <p class="d-inline-block mb-0"><a href="https://www.linkedin.com/in/federicofois" target="_blank" class="footer-link"><i class="fa-brands fa-linkedin pe-1"></i> Linkedin</a></p>
                 </div>
             </div>
-            
+
+            <ul class="m-0 p-0 text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
+                <li class="d-inline-block mx-4 mb-4">
+                    <a class="footer-link text-uppercase" href="#jumbotron">home</a>
+                </li>
+                <li class="d-inline-block mx-4 mb-4">
+                    <a class="footer-link text-uppercase" href="#about-me">about-me</a>
+                </li>
+                <li class="d-inline-block mx-4 mb-4">
+                    <a class="footer-link text-uppercase" href="#skills">skills</a>
+                </li>
+                <li class="d-inline-block mx-4 mb-4">
+                    <a class="footer-link text-uppercase" href="#projects">projects</a>
+                </li>
+                <li class="d-inline-block mx-4 mb-4">
+                    <a class="footer-link text-uppercase" href="#about-me">about-me</a>
+                </li>
+            </ul>
         </section>
     </main>
     <!-- FINE main -->
@@ -387,31 +456,25 @@
         <div class="container d-flex justify-content-between align-items-center p-4">
             <!-- firma -->
             <div class="signature">
-                <p class="m-0 text-white">
+                <p class="m-0 footer-text">
                     &copy;03/04/2023 - Federico Fois
                 </p>
-            </div>
-
-            <!-- contattami -->
-            <div class="contact-me text-white">
-                <span class="text-center">contact me:</span>
-                <p>fedefox14@gmail.com</p>
             </div>
 
             <!-- link social -->
             <ul class="m-0 p-0 position-relative">
                 <li class="d-inline-block">
-                    <a class="social text-white  rounded-circle text-center align-center" href="https://github.com/Fedois" target="_blank">
+                    <a class="footer-text social  rounded-circle text-center align-center" href="https://github.com/Fedois" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
                 <li class="d-inline-block">
-                    <a class="social text-white  rounded-circle text-center align-center" href="https://www.instagram.com/fedois_/" target="_blank">
+                    <a class="footer-text social  rounded-circle text-center align-center" href="https://www.instagram.com/fedois_/" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
                 <li class="d-inline-block">
-                    <a class="social text-white  rounded-circle text-center align-center" href="https://www.linkedin.com/in/federicofois" target="_blank">
+                    <a class="footer-text social  rounded-circle text-center align-center" href="https://www.linkedin.com/in/federicofois" target="_blank">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                 </li>
@@ -423,6 +486,10 @@
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
