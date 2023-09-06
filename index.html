@@ -26,48 +26,46 @@
 </head>
 <body>
 
-    <div class="dark-mode position-fixed end-0 p-3 text-dark fs-5">
-        <i class="fa-solid fa-moon"></i>
-        <i class="fa-solid fa-sun text-white"></i>
-    </div>
-
-    <div class="header-links p-2 rounded-5">
+    <div class="header-links pos-down rounded-5">
         <div class="h-100 w-100">
-            <nav class="navigation" data-aos="fade-down" data-aos-duration="1000">
-                <ul class="m-0 p-0">
-                    <li class="my-3">
-                        <a title="home" class="link-page rounded-circle text-center" href="#jumbotron"><i class="fa-solid fa-house"></i></i></a>
+            <nav class="navigation" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-offset="-10"  data-aos-delay="700">
+                <ul class="m-0 p-0 d-flex justify-content-center align-items-center">
+                    <li class="text-center">
+                        <a title="home" class="link-page p-3" href="#"><i class="fa-solid fa-house"></i></i></a>
                     </li>
-                    <li class="my-3">
-                        <a title="about me" class="link-page rounded-circle text-center" href="#about-me"><i class="fa-solid fa-user"></i></a>
+                    <li class="text-center">
+                        <a title="about me" class="link-page p-3" href="#about-me"><i class="fa-solid fa-user"></i></a>
                     </li>
-                    <li class="my-3">
-                        <a title="skills" class="link-page rounded-circle text-center" href="#skills"><i class="fa-solid fa-laptop-code"></i></a>
+                    <li class="text-center">
+                        <a title="skills" class="link-page p-3" href="#skills"><i class="fa-solid fa-laptop-code"></i></a>
                     </li>
-                    <li class="my-3">
-                        <a title="projects" class="link-page rounded-circle text-center" href="#projects"><i class="fa-regular fa-folder-open"></i></a>
+                    <li class="text-center">
+                        <a title="projects" class="link-page p-3" href="#projects"><i class="fa-regular fa-folder-open"></i></a>
                     </li>
-                    <li class="my-3">
-                        <a title="contact me" class="link-page rounded-circle text-center" href="#contact-me"><i class="fa-regular fa-paper-plane"></i></a>
+                    <li class="text-center">
+                        <a title="contact me" class="link-page p-3" href="#contact-me"><i class="fa-regular fa-paper-plane"></i></a>
+                    </li>
+                    <li class="text-center dark-mode" title="change theme">
+                        <a title="change theme" class="link-page p-3"><i class="fa-solid fa-palette"></i></a>
                     </li>
                 </ul>
             </nav>
         </div>
     </div>
+
     <!-- INIZIO header -->
     <header class="position-relative" id="home">
-
         <!-- jumbotron -->
         <section id="jumbotron" class="position-relative">
             <div class="position-fixed w-100 top-50 start-50 translate-middle">
                 <div class="jumbo-content text-center d-flex align-items-center justify-content-center">
-                    <div class="my-name" data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="0">                       
-                        <h2>Ciao, sono</h2>
-                        <h1>Federico Fois</h1>
-                        <h2>web developer</h2>
+                    <div class="my-name" data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="0" data-aos-delay="300">                       
+                        <h2 class="m-0">Ciao, sono</h2>
+                        <h1 class="m-0">Federico Fois</h1>
+                        <h2 class="m-0">web developer</h2>
 
                         <div class="socials-jumbo">
-                            <ul class="mt-3 p-0 position-relative">
+                            <ul class="mt-4 p-0 position-relative">
                                 <li class="d-inline-block mx-1" >
                                     <a class="social m-0 rounded-circle align-center" href="https://github.com/Fedois" target="_blank">
                                         <i class="fa-brands fa-github"></i>
@@ -87,7 +85,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" data-aos-duration="1000">
+                    <div data-aos="fade-down" data-aos-duration="1000"  data-aos-delay="600">
                         <img class="photo-jumbo rounded-circle object-fit-cover" src="img/bgMeJumbo.png" alt="">
                     </div>
                 </div>
@@ -101,7 +99,7 @@
         <div class="position-relative h-100 w-100">
 
             <!-- freccia -->
-            <div class="direction fs-1 position-relative">
+            <div class="direction fs-1 position-relative" data-aos="fade-up" data-aos-offset="-10" data-aos-duration="1000"  data-aos-delay="600">
                 <a href="#about-me" class="arrow position-absolute position-absolute start-50 translate-middle">
                     <i class="fa-solid fa-chevron-up"></i>
                 </a>
@@ -158,9 +156,9 @@
                 </div>
                  <!-- scarica CV -->
                  <div class="curriculum mt-5 text-center">
-                    <a href="https://drive.google.com/file/d/1A_UukjLGrryP4XPfabVf-A3WPzm6M9Wu/view?usp=share_link" class="border-color px-3 py-2">
+                    <!-- <a href="" class="border-color px-3 py-2">
                         download CV
-                    </a>
+                    </a> -->
                 </div>
             </section>
 
@@ -175,7 +173,7 @@
                             <h4>Front-end</h4>
                             <div class="list-languages">
                                 <div class="container">
-                                    <div class="row row-cols-2">
+                                    <div class="row row-cols-1 row-cols-sm-2">
                                       <div class="col">
                                         <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> HTML</strong> <em class="d-block text-secondary">autodidatta</em></div>
                                       </div>
@@ -183,7 +181,7 @@
                                         <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> CSS</strong><em class="d-block text-secondary">autodidatta</em></div>
                                       </div>
                                       <div class="col">
-                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> JavaScript</strong><em class="d-block text-secondary">autodidatta/Boolean</em></div>
+                                        <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> JavaScript</strong><em class="d-block text-secondary">Boolean</em></div>
                                       </div>
                                       <div class="col">
                                         <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> SASS</strong><em class="d-block text-secondary">Boolean</em></div>
@@ -208,7 +206,7 @@
                             <h4>Back-end</h4>
                             <div class="list-languages">
                                 <div class="container">
-                                    <div class="row row-cols-2">
+                                    <div class="row row-cols-1 row-cols-sm-2">
                                       <div class="col">
                                         <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> PHP</strong> <em class="d-block text-secondary">Boolean</em></div>
                                       </div>
@@ -236,7 +234,41 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="list-tech"> -->
+                <div class="w-100 p-3 text-center" data-aos="fade-up" data-aos-duration="1000" >
+                    <div class="rounded-5 border-color change-border py-3">
+                        <h4>Tools</h4>
+                        <div class="list-languages">
+                            <div class="container text-center">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> VScode</strong> <em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> IntelliJ IDEA</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> MAMP</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Postman</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> Git</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> GitHub</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> GitLab</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="p-3"> <strong><i class="fa-solid fa-circle-check"></i> PhpMyAdmin</strong><em class="d-block text-secondary"></em></div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -249,7 +281,7 @@
                         <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
                             <div class="content-proj change-border border-color p-4 rounded-4"  >
                                 <h3 class="mb-3">Agency</h3>
-                                <div class="img-proj border-color rounded-4"> <img src="img/agency.png" class="h-100 w-100" alt=""></div>
+                                <div class="img-proj rounded-4"> <img src="img/agency.png" class="h-100 w-100" alt=""></div>
                                 <div class="buttons-proj mt-4">
                                     <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/proj-html-vuejs">view github</a>
                                     <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
@@ -279,7 +311,7 @@
                         <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
                             <div class="content-proj change-border border-color p-4 rounded-4"  >
                                 <h3 class="mb-3">Booking</h3>
-                                <div class="img-proj border-color rounded-4"> <img src="img/boolbnb.png"  class="h-100 w-100" alt=""></div>
+                                <div class="img-proj rounded-4"> <img src="img/boolbnb.png"  class="h-100 w-100" alt=""></div>
                                 <div class="buttons-proj mt-4">
                                     <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Chiaravalle04/boolbnb_be">view github</a>
                                     <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
@@ -290,11 +322,11 @@
                                             Replica di un sistema di 
                                             prenotazione con la collaborazione di un
                                             team di programmatori, con l'obiettivo di creare 
-                                            una piattaforma web che consentisse agli utenti di 
+                                            una piattaforma web che consente agli utenti di 
                                             prenotare servizi o risorse in modo efficiente e intuitivo. 
                                             La parte backend è stata sviluppata utilizzando Laravel, 
                                             un framework PHP robusto e flessibile, mentre la parte 
-                                            frontend è stata realizzata con Vue.js, un framework 
+                                            frontend è stata realizzata con Vue.js, framework 
                                             JavaScript progressivo.
                                         </p>
                                     </div>
@@ -305,7 +337,7 @@
                         <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
                             <div class="content-proj change-border border-color p-4 rounded-4"  >
                                 <h3 class="mb-3">Netflix</h3>
-                                <div class="img-proj border-color rounded-4"> <img src="img/netflix.png" class="h-100 w-100" alt=""></div>
+                                <div class="img-proj rounded-4"> <img src="img/netflix.png" class="h-100 w-100" alt=""></div>
                                 <div class="buttons-proj mt-4">
                                     <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/vite-boolflix">view github</a>
                                     <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
@@ -332,7 +364,7 @@
                         <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
                             <div class="content-proj change-border border-color p-4 rounded-4"  >
                                 <h3 class="mb-3">WhatsApp</h3>
-                                <div class="img-proj border-color rounded-4"> <img src="img/whatsapp.png"  class="h-100 w-100" alt=""></div>
+                                <div class="img-proj rounded-4"> <img src="img/whatsapp.png"  class="h-100 w-100" alt=""></div>
                                 <div class="buttons-proj mt-4">
                                     <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/vue-boolzapp">view github</a>
                                     <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
@@ -340,8 +372,8 @@
                                 <div class="collapse" id="collapseExample3">
                                     <div class="card bg-transparent card-body border-0">
                                         <p class="m-0">
-                                            Rreplica
-                                            del sito di WhatsApp utilizzando HTML5,
+                                            Replica
+                                            di WhatsApp web utilizzando HTML5,
                                             CSS3, JavaScript e i framework Bootstrap
                                             e Vue.js. Durante il progetto, ho creato
                                             un sito web interattivo e reattivo, con
@@ -362,7 +394,7 @@
                         <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
                             <div class="content-proj change-border border-color p-4 rounded-4" >
                                 <h3 class="mb-3">Spotify</h3>
-                                <div class="img-proj border-color rounded-4"> <img src="img/spotify.png"  class="h-100 w-100" alt=""></div>
+                                <div class="img-proj rounded-4"> <img src="img/spotify.png"  class="h-100 w-100" alt=""></div>
                                 <div class="buttons-proj mt-4">
                                     <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/html-css-spotifyweb">view github</a>
                                     <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
@@ -388,7 +420,7 @@
                         <div class="col mb-2 p-3 text-center" data-aos="fade-up" data-aos-duration="1000">
                             <div class="content-proj change-border border-color p-4 rounded-4"  >
                                 <h3 class="mb-3">Dropbox</h3>
-                                <div class="img-proj border-color rounded-4"> <img src="img/dropbox.png"  class="h-100 w-100" alt=""></div>
+                                <div class="img-proj rounded-4"> <img src="img/dropbox.png"  class="h-100 w-100" alt=""></div>
                                 <div class="buttons-proj mt-4">
                                     <a class="d-inline-block mx-2 p-2 mini-git border-color" href="https://github.com/Fedois/htmlcss-dropbox">view github</a>
                                     <a class="d-inline-block mx-2 p-2 btn-description" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample">descrizione</a>
@@ -402,8 +434,8 @@
                                             curare il più possibile l'interfaccia
                                             rendendola quasi uguale al sito vero.
                                             durante il progetto, ho avuto il primo
-                                            approccio con le animazioni usando l'hover
-                                            nei bottoni e link.
+                                            approccio con le animazioni usando la proprietà hover
+                                            in alcuni elementi nella pagina.
                                         </p>
                                     </div>
                                 </div>
@@ -443,9 +475,6 @@
                 <li class="d-inline-block mx-4 mb-4">
                     <a class="footer-link text-uppercase" href="#projects">projects</a>
                 </li>
-                <li class="d-inline-block mx-4 mb-4">
-                    <a class="footer-link text-uppercase" href="#about-me">about-me</a>
-                </li>
             </ul>
         </section>
     </main>
@@ -457,7 +486,7 @@
             <!-- firma -->
             <div class="signature">
                 <p class="m-0 footer-text">
-                    &copy;03/04/2023 - Federico Fois
+                    &copy;06/09/2023 - Federico Fois
                 </p>
             </div>
 

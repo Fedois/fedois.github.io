@@ -7,11 +7,11 @@
     --bg-blur: rgba(255, 255, 255, 0.2);
     --bg-blur-arr: rgba(255, 255, 255, 0.2);
     --shadow: 0px 2px 14px 5px rgba(0,0,0,0.18);
-    color: #888888;
+    color: #d7d7d7;
 }
 *{
     font-family: 'Poppins', sans-serif;
-    scroll-margin: 150px;
+    scroll-margin-bottom: -300px;
     transition: all 0.2s;
 }
 .border-color{
@@ -57,21 +57,17 @@ li{
 
 /* HEADER */
 .dark-mode{
-    z-index: 200;
     cursor: pointer;
-}
-.dark-mode i:last-child{
-    display: none;
 }
 /* header fixed */
 .header-links{
     position: fixed;
-    top: 50%;
-    left: 0;
-    z-index: 200;
-    transform: translateY(-50%);
+    z-index: 1;
     background-color: var(--bg-blur);
     backdrop-filter: blur(20px);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     margin-left: 10px;
 }
 nav > ul{
@@ -80,9 +76,6 @@ nav > ul{
 }
 .link-page{
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
     transition: all 0.2s !important;
     color: var(--secondary)  !important;
     position: relative;
@@ -162,6 +155,9 @@ main{
     overflow: hidden;
     height: 300px;
 }
+.img-proj > img{
+    object-fit: contain;
+}
 .buttons-proj > a {
     cursor: pointer;
     border-radius: 5px;
@@ -171,7 +167,7 @@ main{
 }
 .buttons-proj > a:last-child{
     background-color: var(--primary);
-    color: var(--secondary) !important;
+    color: white !important;
 }
 .mini-git:hover{
     border: 1px solid var(--primary) !important;
@@ -185,6 +181,7 @@ main{
 /* FOOTER */
 footer{
     background-color: var(--primary);
+    z-index: 2;
 }
 .footer-link{
     color: var(--text);

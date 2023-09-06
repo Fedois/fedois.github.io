@@ -5,40 +5,46 @@ const navigation = document.querySelector('.navigation > ul')
 const info = document.querySelector('.info-me');
 const socials = document.querySelectorAll('.socials-jumbo a');
 const root = document.documentElement
-let changeColor = false;
+const link = document.querySelectorAll('.link-page');
+let changeColor = localStorage.getItem('dark-mode') ? localStorage.getItem('dark-mode') : 'false';
 
-// impostazioni scroll di default
+changeColor == 'true' ? whiteTheme(root) : darkTheme(root)
+
+// impostazioni scroll
 document.addEventListener('scroll', function(){
     // componenti html
     let scroll = window.scrollY;
-    const link = document.querySelectorAll('.link-page');
     const menu = document.querySelector('.btn');
     const photo = document.querySelector('.ph-img');
     const projects = document.querySelectorAll('.card-proj');
     const nameHeader = document.querySelector('.header-fixed h4')
 
     // change color navigation
-    if(changeColor == false){
+    if(changeColor == 'true'){
         if(scroll > 500){
+            localStorage.setItem('scroll', '500')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--blue)', 'important');
             }
             root.style.setProperty('--bg-blur', 'rgba(34, 79, 170, 0.2)')
             
         } else{
+            localStorage.setItem('scroll', '0')
             for (let i = 0; i < link.length; i++) {
-                link[i].style.setProperty('color', 'white', 'important');
+                link[i].style.setProperty('color', 'var(--secondary)', 'important');
             }
             root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
         }
     } else{
         if(scroll > 500){
+            localStorage.setItem('scroll', '500')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--text)', 'important');
             }
             root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
             
         } else{
+            localStorage.setItem('scroll', '0')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--secondary)', 'important');
             }
@@ -47,33 +53,50 @@ document.addEventListener('scroll', function(){
     }
 })
 
-// cambia icona dark mode
-
+// cambia tema
 document.querySelector('.dark-mode').addEventListener('click', function(){
-    changeColor = changeColor == true ? false : true
-    if(changeColor == true){
-        root.style.setProperty('--secondary', 'rgb(1, 1, 26)');
-        root.style.setProperty('--text', 'white');
-        root.style.setProperty('--border-color', '#888888');
-        document.querySelector('.photo-jumbo').src='img/bgMeJumboDark.png'
-        root.style.setProperty('--bg-blur', 'rgba(1, 1, 26, 0.2)');
-        root.style.setProperty('--bg-blur-arr', 'rgba(1, 1, 26, 0.2)');
-        document.querySelector('.dark-mode i:first-child').style.display = 'none'
-        document.querySelector('.dark-mode i:last-child').style.display = 'block'
-        root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
+    if(changeColor == 'true'){
+        changeColor = 'false'
+        localStorage.setItem('dark-mode', 'false')
+        darkTheme(root)
+        if(localStorage.getItem('scroll') == '500'){
+            console.log('ci')
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.setProperty('color', 'var(--text)', 'important');
+            }
+            root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
+        }
     } else{
-        root.style.setProperty('--secondary', 'white');
-        root.style.setProperty('--text', 'rgb(25, 25, 25)');
-        root.style.setProperty('--border-color', 'rgb(134, 133, 133)');
-        document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png'
-        root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)');
-        root.style.setProperty('--bg-blur-arr', 'rgba(255, 255, 255, 0.2)');
-        document.querySelector('.dark-mode i:first-child').style.display = 'block'
-        document.querySelector('.dark-mode i:last-child').style.display = 'none'
-        root.style.setProperty('--shadow', '0px 2px 14px 5px rgba(0,0,0,0.18)');
+        changeColor = 'true'
+        localStorage.setItem('dark-mode', 'true')
+        whiteTheme(root)
+        if(localStorage.getItem('scroll') == '500'){
+            console.log('ci')
+            for (let i = 0; i < link.length; i++) {
+                link[i].style.setProperty('color', 'var(--blue)', 'important');
+            }
+            root.style.setProperty('--bg-blur', 'rgba(34, 79, 170, 0.2)')
+        }
     }
 })
-console.log(changeColor)
 
 
 // FUNZIONI
+function darkTheme(root){
+    root.style.setProperty('--secondary', 'rgb(1, 1, 26)');
+    root.style.setProperty('--text', '#d7d7d7');
+    root.style.setProperty('--border-color', '#888888');
+    document.querySelector('.photo-jumbo').src='img/bgMeJumboDark.png'
+    root.style.setProperty('--bg-blur', 'rgba(1, 1, 26, 0.2)');
+    root.style.setProperty('--bg-blur-arr', 'rgba(1, 1, 26, 0.2)');
+    root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
+}
+function whiteTheme(root){
+    root.style.setProperty('--secondary', 'white');
+    root.style.setProperty('--text', 'rgb(25, 25, 25)');
+    root.style.setProperty('--border-color', 'rgb(134, 133, 133)');
+    document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png'
+    root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)');
+    root.style.setProperty('--bg-blur-arr', 'rgba(255, 255, 255, 0.2)');
+    root.style.setProperty('--shadow', '0px 2px 14px 5px rgba(0,0,0,0.18)');
+}
