@@ -68,6 +68,7 @@ li{
     z-index: 1;
     background-color: var(--bg-blur);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     top: 50%;
     left: 0;
     transform: translateY(-50%);
