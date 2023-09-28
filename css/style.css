@@ -1,21 +1,25 @@
 /* GENERAL */
 :root{
     --primary: rgb(34, 79, 170);
-    --text: rgb(25, 25, 25);
+    --text: #262626;
     --secondary: white;
-    --border-color: rgb(134, 133, 133);
     --bg-blur: rgba(255, 255, 255, 0.2);
     --bg-blur-arr: rgba(255, 255, 255, 0.2);
+    --bg-cards: rgb(245, 243, 243);
     --shadow: 0px 2px 14px 5px rgba(0,0,0,0.18);
-    color: #d7d7d7;
+    color: #d4d3d3;
+    color: #b9b9b9;
 }
 *{
     font-family: 'Poppins', sans-serif;
     scroll-margin-bottom: -300px;
     transition: all 0.2s;
 }
+.bg-card{
+    background-color: var(--bg-cards);
+}
 .border-color{
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--bg-cards);
 }
 a{
     text-decoration: none !important;
@@ -39,7 +43,6 @@ li{
     font-size: 1.5em;
     transition: all 0.2s;
     color: var(--text) !important;
-    background-color: var(--secondary) !important;
 }
 .git a:hover, .curriculum a:hover{
     cursor: pointer;
@@ -92,10 +95,6 @@ nav > ul{
 #jumbotron h1{
     font-size: 4em;
 }
-.my-name{
-    transition: 2s all;
-    animation: revealText 2s linear;
-}
 .my-name h1, .my-name h2{
     transition: all 0.2s;
     color: var(--secondary) !important;
@@ -109,8 +108,7 @@ nav > ul{
     height: 40px;
     width: 40px;
     line-height: 40px;
-    transition: all 0s !important;
-    transition: border 0.2s !important;
+    transition: all 0.1s !important;
 }
 .socials-jumbo a:hover{
 	background-color: var(--secondary);
@@ -171,7 +169,7 @@ main{
 }
 .mini-git:hover{
     border: 1px solid var(--primary) !important;
-    color: var(--secondary) !important;
+    color: white !important;
     background-color: var(--primary);
 }
 .collapse .card{
