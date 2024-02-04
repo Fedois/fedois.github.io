@@ -6,18 +6,13 @@ const info = document.querySelector('.info-me');
 const socials = document.querySelectorAll('.socials-jumbo a');
 const root = document.documentElement
 const link = document.querySelectorAll('.link-page');
-let changeColor = localStorage.getItem('dark-mode') ? localStorage.getItem('dark-mode') : 'false';
+let changeColor = localStorage.getItem('dark-mode') ? localStorage.getItem('dark-mode') : 'true';
 
 changeColor == 'true' ? whiteTheme(root) : darkTheme(root)
 
 // impostazioni scroll
 document.addEventListener('scroll', function(){
-    // componenti html
     let scroll = window.scrollY;
-    const menu = document.querySelector('.btn');
-    const photo = document.querySelector('.ph-img');
-    const projects = document.querySelectorAll('.card-proj');
-    const nameHeader = document.querySelector('.header-fixed h4')
 
     // change color navigation
     if(changeColor == 'true'){
@@ -83,12 +78,12 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
 
 // FUNZIONI
 function darkTheme(root){
-    root.style.setProperty('--secondary', 'rgb(1, 1, 26)');
+    root.style.setProperty('--secondary', '#061d3d');
     root.style.setProperty('--text', '#b9b9b9');
-    root.style.setProperty('--bg-cards', 'rgb(2, 2, 36)');
+    root.style.setProperty('--bg-cards', '#04152d');
     document.querySelector('.photo-jumbo').src='img/bgMeJumboDark.png'
-    root.style.setProperty('--bg-blur', 'rgba(1, 1, 26, 0.2)');
-    root.style.setProperty('--bg-blur-arr', 'rgba(1, 1, 26, 0.2)');
+    root.style.setProperty('--bg-blur', 'rgba(6,29,61,0.2)');
+    root.style.setProperty('--bg-blur-arr', 'rgba(6,29,61,0.2)');
     root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
 }
 function whiteTheme(root){
