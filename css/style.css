@@ -85,6 +85,10 @@ nav > ul{
     color: var(--secondary)  !important;
     position: relative;
     bottom: 0;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
 }
 .link-page:hover{
     bottom: 3px;

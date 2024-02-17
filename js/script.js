@@ -1,4 +1,3 @@
-
 // componenti html utilizzabili da tutti gli scoped
 const header = document.querySelector('.header-links');
 const navigation = document.querySelector('.navigation > ul')
@@ -19,6 +18,7 @@ document.addEventListener('scroll', function(){
         if(scroll > 500){
             localStorage.setItem('scroll', '500')
             for (let i = 0; i < link.length; i++) {
+                console.log(window.getComputedStyle(link[i]))
                 link[i].style.setProperty('color', 'var(--blue)', 'important');
             }
             root.style.setProperty('--bg-blur', 'rgba(34, 79, 170, 0.2)')
@@ -55,7 +55,6 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
         localStorage.setItem('dark-mode', 'false')
         darkTheme(root)
         if(localStorage.getItem('scroll') == '500'){
-            console.log('ci')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--text)', 'important');
             }
@@ -66,7 +65,6 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
         localStorage.setItem('dark-mode', 'true')
         whiteTheme(root)
         if(localStorage.getItem('scroll') == '500'){
-            console.log('ci')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--blue)', 'important');
             }
@@ -86,11 +84,12 @@ function darkTheme(root){
     root.style.setProperty('--bg-blur-arr', 'rgba(6,29,61,0.2)');
     root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
 }
+
 function whiteTheme(root){
     root.style.setProperty('--secondary', 'white');
     root.style.setProperty('--text', '#262626');
     root.style.setProperty('--bg-cards', 'rgb(245, 243, 243)');
-    document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png'
+    document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png';
     root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)');
     root.style.setProperty('--bg-blur-arr', 'rgba(255, 255, 255, 0.2)');
     root.style.setProperty('--shadow', '0px 2px 14px 5px rgba(0,0,0,0.18)');
