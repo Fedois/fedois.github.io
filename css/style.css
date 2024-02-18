@@ -93,6 +93,7 @@ nav > ul{
 .link-page:hover{
     bottom: 3px;
 }
+
 /* jumbotron */
 #jumbotron{
     height: 100vh;
@@ -156,10 +157,10 @@ main{
 }
 /* skills */
 .devicon{
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 .devicon-img{
-    width: 25px;
+    width: 30px;
     object-fit: cover;
 }
 /* project */
