@@ -60,6 +60,12 @@ li{
 }
 
 /* HEADER */
+header{
+    background-size: 100vw;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left;
+}
 .dark-mode{
     cursor: pointer;
 }
@@ -97,7 +103,7 @@ nav > ul{
 /* jumbotron */
 #jumbotron{
     height: 100vh;
-    background-color: var(--primary);
+    background-color: rgba(44, 106, 230, 0.9);
 }
 #jumbotron h1{
     font-size: 4em;
@@ -122,7 +128,7 @@ nav > ul{
     color: var(--primary) !important;
 }
 .photo-jumbo{
-    border: 2px solid var(--secondary) ;
+    /* border: 2px solid var(--secondary) ; */
     object-fit: cover;
     width: 350px;
     height: 350px;
