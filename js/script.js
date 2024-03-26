@@ -75,9 +75,9 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
 // FUNZIONI
 function darkTheme(root){
     document.querySelector('.photo-jumbo').src='img/bgMeJumboDark.png'
-    root.style.setProperty('--secondary', '#061d3d');
-    root.style.setProperty('--text', '#b9b9b9');
-    root.style.setProperty('--bg-cards', '#04152d');
+    root.style.setProperty('--secondary', '#111');
+    root.style.setProperty('--text', '#e0e0e0');
+    root.style.setProperty('--bg-cards', '#15151d');
     root.style.setProperty('--bg-blur', 'rgba(6,29,61,0.2)');
     root.style.setProperty('--bg-blur-arr', 'rgba(6,29,61,0.2)');
     root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
