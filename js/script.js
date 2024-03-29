@@ -84,7 +84,7 @@ function darkTheme(root){
 }
 
 function whiteTheme(root){
-    document.querySelector('.photo-jumbo').src='img/bgMeJumbo.jpeg';
+    document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png';
     root.style.setProperty('--secondary', 'white');
     root.style.setProperty('--text', '#262626');
     root.style.setProperty('--bg-cards', 'rgb(245, 243, 243)');
