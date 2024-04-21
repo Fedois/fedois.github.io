@@ -21,9 +21,6 @@
     width: 100% !important;
     text-align: center;
 }
-#about-me h2{
-    padding-bottom: 2rem;
-}
 .photo{
     display: flex;
     justify-content: center;
