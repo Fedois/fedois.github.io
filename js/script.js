@@ -20,7 +20,7 @@ document.addEventListener('scroll', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--blue)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(34, 79, 170, 0.2)')
+            root.style.setProperty('--bg-blur', 'rgba(150, 150, 150, 0.2)')
         } else{
             localStorage.setItem('scroll', '0')
             for (let i = 0; i < link.length; i++) {
@@ -74,7 +74,7 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
 
 // FUNZIONI
 function darkTheme(root){
-    document.querySelector('.photo-jumbo').src='img/bgMeJumboDark.png'
+    document.querySelector('.photo-jumbo').src='img/profile.jpg'
     root.style.setProperty('--secondary', '#111');
     root.style.setProperty('--text', '#e0e0e0');
     root.style.setProperty('--bg-cards', '#15151d');
@@ -84,7 +84,7 @@ function darkTheme(root){
 }
 
 function whiteTheme(root){
-    document.querySelector('.photo-jumbo').src='img/bgMeJumbo.png';
+    document.querySelector('.photo-jumbo').src='img/profile.jpg';
     root.style.setProperty('--secondary', 'white');
     root.style.setProperty('--text', '#262626');
     root.style.setProperty('--bg-cards', 'rgb(245, 243, 243)');

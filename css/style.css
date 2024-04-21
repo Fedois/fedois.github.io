@@ -1,6 +1,6 @@
 /* GENERAL */
 :root{
-    --primary: rgb(44, 106, 230);
+    --primary: rgb(19, 19, 19);
     --text: #262626;
     --secondary: white;
     --bg-blur: rgba(255, 255, 255, 0.2);
@@ -103,7 +103,7 @@ nav > ul{
 /* jumbotron */
 #jumbotron{
     height: 100vh;
-    background-color: rgba(44, 106, 230, 0.9);
+    background-color: rgba(19, 19, 19, 0.9);
 }
 #jumbotron h1{
     font-size: 4em;
