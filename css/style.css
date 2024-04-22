@@ -148,7 +148,7 @@ main{
 .direction a{
     color: var(--secondary) !important;
     top: -50%;
-    background-color: var(--bg-blur-arr) !important;
+    background-color: var(--bg-blur) !important;
     padding: 0 1rem;
     border-radius: 10px 10px 0 0;
 }
