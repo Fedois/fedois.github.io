@@ -103,7 +103,7 @@ nav > ul{
 /* jumbotron */
 #jumbotron{
     height: 100vh;
-    background-color: rgba(19, 19, 19, 0.9);
+    background-color: var(--primary);
 }
 #jumbotron h1{
     font-size: 4em;
@@ -186,7 +186,7 @@ main{
 }
 .buttons-proj > a:last-child{
     background-color: var(--primary);
-    color: white !important;
+    color: var(--secondary) !important;
 }
 .mini-git:hover{
     border: 1px solid var(--primary) !important;

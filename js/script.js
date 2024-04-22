@@ -75,9 +75,11 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
 // FUNZIONI
 function darkTheme(root){
     document.querySelector('.photo-jumbo').src='img/profile.jpg'
+    document.querySelector('.cornice img').src='img/profile2dark.png'
+    root.style.setProperty('--primary', 'rgba(255,255,255,0.8)');
     root.style.setProperty('--secondary', '#111');
     root.style.setProperty('--text', '#e0e0e0');
-    root.style.setProperty('--bg-cards', '#15151d');
+    root.style.setProperty('--bg-cards', '#151515');
     root.style.setProperty('--bg-blur', 'rgba(6,29,61,0.2)');
     root.style.setProperty('--bg-blur-arr', 'rgba(6,29,61,0.2)');
     root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
@@ -85,6 +87,8 @@ function darkTheme(root){
 
 function whiteTheme(root){
     document.querySelector('.photo-jumbo').src='img/profile.jpg';
+    document.querySelector('.cornice img').src='img/profile2.png'
+    root.style.setProperty('--primary', 'rgba(19,19,19,0.8)');
     root.style.setProperty('--secondary', 'white');
     root.style.setProperty('--text', '#262626');
     root.style.setProperty('--bg-cards', 'rgb(245, 243, 243)');
