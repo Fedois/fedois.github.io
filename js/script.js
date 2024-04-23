@@ -20,7 +20,7 @@ document.addEventListener('scroll', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--primary)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(150, 150, 150, 0.2)')
+            root.style.setProperty('--bg-blur', 'rgba(100, 100, 100, 0.2)')
         } else{
             localStorage.setItem('scroll', '0')
             for (let i = 0; i < link.length; i++) {
@@ -41,7 +41,7 @@ document.addEventListener('scroll', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--secondary)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(150, 150, 150, 0.2)')
+            root.style.setProperty('--bg-blur', 'rgba(100, 100, 100, 0.2)')
         }
     }
 })
@@ -66,7 +66,7 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--blue)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(150, 150, 150, 0.2)')
+            root.style.setProperty('--bg-blur', 'rgba(100, 100, 100, 0.2)')
         }
     }
 })
@@ -74,14 +74,13 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
 
 // FUNZIONI
 function darkTheme(root){
-    document.querySelector('.photo-jumbo').src='img/profile.jpg'
+    document.querySelector('.photo-jumbo').src='img/profileDark.png'
     document.querySelector('.cornice img').src='img/profile2dark.png'
     root.style.setProperty('--primary', 'rgba(255,255,255,0.7)');
     root.style.setProperty('--secondary', '#111');
     root.style.setProperty('--text', '#e0e0e0');
     root.style.setProperty('--bg-cards', '#151515');
-    root.style.setProperty('--bg-blur', 'rgba(150,150,150,0.2)');
-    // root.style.setProperty('--bg-blur-arr', 'rgba(6,29,61,0.2)');
+    root.style.setProperty('--bg-blur', 'rgba(100,100,100,0.2)');
     root.style.setProperty('--shadow', '0px 1px 14px 5px rgba(255,255,255,0.1)');
 }
 
@@ -93,6 +92,5 @@ function whiteTheme(root){
     root.style.setProperty('--text', '#262626');
     root.style.setProperty('--bg-cards', 'rgb(245, 243, 243)');
     root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)');
-    // root.style.setProperty('--bg-blur-arr', 'rgba(255, 255, 255, 0.2)');
     root.style.setProperty('--shadow', '0px 2px 14px 5px rgba(0,0,0,0.18)');
 }
