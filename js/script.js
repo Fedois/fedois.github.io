@@ -85,7 +85,7 @@ function darkTheme(root){
 }
 
 function whiteTheme(root){
-    document.querySelector('.photo-jumbo').src='img/profile.jpg';
+    document.querySelector('.photo-jumbo').src='img/profile.png';
     document.querySelector('.cornice img').src='img/profile2.png'
     root.style.setProperty('--primary', 'rgba(19,19,19,0.8)');
     root.style.setProperty('--secondary', 'white');
