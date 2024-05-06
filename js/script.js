@@ -88,7 +88,7 @@ function secondTheme(root){
     document.querySelector('.photo-jumbo').src='img/profileDark.png'
     document.querySelector('.cornice img').src='img/profile2dark.png'
     root.style.setProperty('--primary', 'rgba(255,255,255,0.7)');
-    root.style.setProperty('--secondary', '#111');
+    root.style.setProperty('--secondary', '#1c1c1c');
     root.style.setProperty('--text', '#e0e0e0');
     root.style.setProperty('--bg-cards', '#151515');
     root.style.setProperty('--bg-blur', 'rgba(100,100,100,0.2)');
