@@ -6,8 +6,18 @@ const socials = document.querySelectorAll('.socials-jumbo a');
 const root = document.documentElement
 const link = document.querySelectorAll('.link-page');
 let changeColor = localStorage.getItem('dark-mode') ? localStorage.getItem('dark-mode') : 'true';
-
 changeColor == 'true' ? secondTheme(root) : firstTheme(root)
+
+// Imposta anni
+const start_date = new Date('05/15/2023')
+const current_date = new Date()
+let calc_years = current_date.getFullYear() - start_date.getFullYear()
+let calc_month = current_date.getMonth() - start_date.getMonth()
+if (calc_month < 0){
+    years--
+    months += 12
+}
+document.getElementById('years').innerHTML = calc_years+'.'+calc_month+' anni'
 
 // impostazioni scroll
 document.addEventListener('scroll', function(){
