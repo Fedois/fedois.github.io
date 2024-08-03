@@ -12,12 +12,13 @@ changeColor == 'true' ? secondTheme(root) : firstTheme(root)
 const start_date = new Date('05/15/2023')
 const current_date = new Date()
 let calc_years = current_date.getFullYear() - start_date.getFullYear()
-let calc_month = current_date.getMonth() - start_date.getMonth()
-if (calc_month < 0){
-    years--
-    months += 12
+let calc_months = current_date.getMonth() - start_date.getMonth()
+if (calc_months < 0){
+    calc_years--
+    calc_months += 12
 }
-document.getElementById('years').innerHTML = calc_years+'.'+calc_month+' anni'
+document.getElementById('years').innerHTML = calc_years+' anni'
+document.getElementById('months').innerHTML = calc_months+' mesi'
 
 // impostazioni scroll
 document.addEventListener('scroll', function(){
