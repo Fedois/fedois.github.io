@@ -31,13 +31,11 @@ document.addEventListener('scroll', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--primary)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(100, 100, 100, 0.2)')
         } else{
             localStorage.setItem('scroll', '0')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--secondary)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
         }
     } else{
         if(scroll > 500){
@@ -45,14 +43,12 @@ document.addEventListener('scroll', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--text)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
             
         } else{
             localStorage.setItem('scroll', '0')
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--secondary)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(100, 100, 100, 0.2)')
         }
     }
 })
@@ -67,7 +63,6 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
             for (let i = 0; i < link.length; i++) {
                 link[i].style.setProperty('color', 'var(--text)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(255, 255, 255, 0.2)')
         }
     } else{
         changeColor = 'true'
@@ -75,9 +70,8 @@ document.querySelector('.dark-mode').addEventListener('click', function(){
         secondTheme(root)
         if(localStorage.getItem('scroll') == '500'){
             for (let i = 0; i < link.length; i++) {
-                link[i].style.setProperty('color', 'var(--blue)', 'important');
+                link[i].style.setProperty('color', 'var(--primary)', 'important');
             }
-            root.style.setProperty('--bg-blur', 'rgba(100, 100, 100, 0.2)')
         }
     }
 })
