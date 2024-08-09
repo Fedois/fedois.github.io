@@ -8,7 +8,7 @@ const link = document.querySelectorAll('.link-page');
 let changeColor = localStorage.getItem('dark-mode') ? localStorage.getItem('dark-mode') : 'true';
 changeColor == 'true' ? secondTheme(root) : firstTheme(root)
 
-// Imposta anni
+// Imposta anni e mesi
 const start_date = new Date('05/15/2023')
 const current_date = new Date()
 let calc_years = current_date.getFullYear() - start_date.getFullYear()
