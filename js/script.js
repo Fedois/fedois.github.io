@@ -133,6 +133,26 @@ const TxtType = function(el, toRotate, period) {
         document.body.appendChild(css);
     };
 
+//change status links
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      // Se la sezione è visibile
+      if (entry.isIntersecting) {
+        link.forEach(link => link.classList.remove('active'));
+        document.querySelector(`a[href="#${entry.target.id}"]`).classList.add('active')
+      }
+    });
+  },
+  {
+    // Imposta un margine di root per rilevare l'intersezione prima o dopo
+    rootMargin: '0px 0px 0% 0px', // Inizia a colorare quando la sezione è scorsa al 50%
+    threshold: 0.5 // La sezione deve essere almeno visibile al 50% per attivarsi
+  }
+);
+sections.forEach(section => observer.observe(section));
+
 
 // FUNZIONI
 function firstTheme(root){

@@ -99,11 +99,14 @@ nav > ul{
     width: 30px;
     line-height: 30px;
     border-radius: 50%;
+    position: relative;
 }
 .link-page:hover{
-    bottom: 3px;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
 }
-
+.link-page.active{
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.5);
+}
 /* jumbotron */
 #jumbotron{
     height: 100vh;
@@ -111,6 +114,10 @@ nav > ul{
 }
 #jumbotron h1{
     font-size: 4em;
+}
+.dark-mode a{
+ color: var(--secondary) !important;
+ font-size: 1.3em
 }
 .my-name h1, .my-name h2{
     transition: all 0.2s;
