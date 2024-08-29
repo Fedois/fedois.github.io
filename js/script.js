@@ -148,7 +148,7 @@ const observer = new IntersectionObserver(
   {
     // Imposta un margine di root per rilevare l'intersezione prima o dopo
     rootMargin: '0px 0px 0% 0px', // Inizia a colorare quando la sezione è scorsa al 50%
-    threshold: 0.5 // La sezione deve essere almeno visibile al 50% per attivarsi
+    threshold: 0.2 // La sezione deve essere almeno visibile al 50% per attivarsi
   }
 );
 sections.forEach(section => observer.observe(section));
