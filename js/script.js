@@ -146,8 +146,6 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    // Imposta un margine di root per rilevare l'intersezione prima o dopo
-    rootMargin: '0px 0px 0% 0px', // Inizia a colorare quando la sezione è scorsa al 50%
     threshold: 0.2 // La sezione deve essere almeno visibile al 50% per attivarsi
   }
 );
@@ -156,7 +154,7 @@ sections.forEach(section => observer.observe(section));
 
 // FUNZIONI
 function firstTheme(root){
-    document.querySelector('.photo-jumbo').src='img/profile.png';
+    document.querySelector('.dark-mode i').className = 'fa-solid fa-toggle-on'
     document.querySelector('.cornice img').src='img/profile2.png'
     root.style.setProperty('--primary', 'rgba(19,19,19,0.8)');
     root.style.setProperty('--secondary', 'white');
@@ -167,7 +165,7 @@ function firstTheme(root){
 }
 
 function secondTheme(root){
-    document.querySelector('.photo-jumbo').src='img/profileDark.png'
+    document.querySelector('.dark-mode i').className = 'fa-solid fa-toggle-off'
     document.querySelector('.cornice img').src='img/profile2dark.png'
     root.style.setProperty('--primary', 'rgba(255,255,255,0.6)');
     root.style.setProperty('--secondary', '#1c1c1c');
