@@ -134,6 +134,8 @@ const TxtType = function(el, toRotate, period) {
     };
 
 //change status links
+let threshold_num = 0.5
+if(window.innerWidth <= 1000){ threshold_num = 0.3 }
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(
   (entries) => {
@@ -146,7 +148,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.2 // La sezione deve essere almeno visibile al 50% per attivarsi
+    threshold: threshold_num
   }
 );
 sections.forEach(section => observer.observe(section));
