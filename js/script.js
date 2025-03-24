@@ -134,30 +134,27 @@ const TxtType = function(el, toRotate, period) {
     };
 
 //change status links
-let threshold_num = 0.5
-if(window.innerWidth <= 1000){ threshold_num = 0.3 }
-const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
       // Se la sezione è visibile
       if (entry.isIntersecting) {
         link.forEach(link => link.classList.remove('active'));
-        document.querySelector(`a[href="#${entry.target.id}"]`).classList.add('active')
+        document.querySelector(`a[href="#${entry.target.attributes['data-id'].nodeValue}"]`).classList.add('active')
       }
     });
   },
   {
-    threshold: threshold_num
+    threshold: 1
   }
 );
+const sections = document.querySelectorAll('section h2');
 sections.forEach(section => observer.observe(section));
 
 
 // FUNZIONI
 function firstTheme(root){
     document.querySelector('.dark-mode i').className = 'fa-solid fa-toggle-on'
-    document.querySelector('.cornice img').src='img/profile2.png'
     root.style.setProperty('--primary', 'rgba(19,19,19,0.8)');
     root.style.setProperty('--secondary', 'white');
     root.style.setProperty('--text', '#262626');
@@ -168,7 +165,6 @@ function firstTheme(root){
 
 function secondTheme(root){
     document.querySelector('.dark-mode i').className = 'fa-solid fa-toggle-off'
-    document.querySelector('.cornice img').src='img/profile2dark.png'
     root.style.setProperty('--primary', 'rgba(255,255,255,0.6)');
     root.style.setProperty('--secondary', '#1c1c1c');
     root.style.setProperty('--text', '#e0e0e0');

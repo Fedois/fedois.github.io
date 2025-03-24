@@ -88,6 +88,14 @@
         font-size: 1.3em;
     }
 
+    /* about-me */
+    .my-experiences {
+        display: block;
+    }
+    .my-experiences > div {
+        width: 100% !important;
+    }
+
     /* Projects */
     .img-proj{
         height: 250px;
@@ -136,13 +144,6 @@
     /* header */
     .header-links ul li{
         margin: 0 !important;
-    }
-    /* about-me */
-    .my-experiences {
-        display: block;
-    }
-    .my-experiences > div {
-        width: 100% !important;
     }
     /* projects */
     .img-proj{

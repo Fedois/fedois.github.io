@@ -56,11 +56,12 @@
 
         <!-- jumbotron -->
         <section id="jumbotron" class="position-relative">
+            <h2 data-id="jumbotron" class="m-0"></h2>
             <div class="position-fixed w-100 top-50 start-50 translate-middle">
                 <div class="jumbo-content text-center d-flex align-items-center justify-content-center">
                     <div class="my-name" data-aos="fade-up" data-aos-duration="1000"  data-aos-offset="0" data-aos-delay="300">                       
                         <h1 class="m-0">Federico Fois</h1>
-                        <h2 class="m-0">
+                        <h2 class="m-0" data-id="jumbotron">
                           <span class="typewrite" href="" data-duration="2000" data-type='["Full Stack", "Web"]'>
                             <span class="wrap"></span>
                           </span>
@@ -113,43 +114,99 @@
 
             <!-- sezione 1: about me -->
             <section id="about-me" class="reveal">
-                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-5" >SU DI ME</h2>
+                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-5" data-id="about-me">SU DI ME</h2>
 
-                <div class="container d-flex align-items-center" >
-                    <div class="photo w-50 text-center" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="cornice rounded-4 change-border overflow-hidden">
-                            <img class="ph-img w-100 h-100" src="img/profile2.png" alt="">
-                        </div>
-                    </div>
-        
-                    <div class="info-me w-50">
+                <div class="container d-flex align-items-center" >  
+                    <div class="info-me">
                         <div class="mb-3 my-clouds my-experiences" data-aos="fade-up" data-aos-duration="1000" >
                             <div class="w-50 p-3 text-center">
-                                <div class="rounded-4 change-border bg-card border-color bg-card py-3">
-                                    <p class="m-0"><i class="fa-solid fa-briefcase"></i></p>
-                                    <p class="m-0 mb-1" style="margin-top: -5px !important"><strong>Esperienza</strong></p>
-                                    <p class="m-0" id="years">x anni</p>
-                                    <p class="m-0" id="months">x mesi</p>
-                                    <p class="m-0">Full Stack Developer</p>
+                                <p class="m-0 mb-1">
+                                  <i class="fa-solid fa-briefcase"></i>
+                                  <strong>Esperienze</strong>
+                                </p>
+                                <div id="carouselExp" class="carousel slide bg-card rounded-3 change-border border-color p-4">
+                                  <div class="carousel-inner">
+                                    <!-- <div class="carousel-item active"> -->
+                                    <!--   <a href="widegroup.eu" target="blank" title="Wide Group"> -->
+                                    <!--     <img src="img/job1.png" class="text-inline-block text-center rounded-2" alt="Wide Group" --> 
+                                    <!--          style="width: 70px; height: 70px; object-fit: contain"> -->
+                                    <!--   </a> -->
+                                    <!--   <div class="text-inline-block mt-2"> -->
+                                    <!--     Aprile 2025 - Presente <br> -->
+                                    <!--     Full Stack Developer -->
+                                    <!--   </div> -->
+                                    <!-- </div> -->
+                                    <div class="carousel-item active">
+                                      <a href="https://engim.eu/" target="blank" title="ENGIM srl">
+                                        <img src="img/job2.png" class="text-inline-block text-center bg-white rounded-2" alt="ENGIM srl" 
+                                             style="width: 70px; height: 70px; object-fit: contain">
+                                      <div class="text-inline-block mt-2">
+                                        Maggio 2023 - Presente <br>
+                                        Full Stack Developer
+                                      </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExp" data-bs-slide="prev"> -->
+                                  <!--   <span class="fs-2" aria-hidden="true"><i class="fa-solid fa-angle-left"></i></span> -->
+                                  <!-- </button> -->
+                                  <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExp" data-bs-slide="next"> -->
+                                  <!--   <span class="fs-2" aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span> -->
+                                  <!-- </button> -->
                                 </div>
                             </div>
 
                             <div class="w-50 p-3 text-center"  data-aos="fade-up" data-aos-duration="1000" >
-                                <div class="rounded-4 change-border bg-card border-color bg-card py-3">
-                                    <p class="m-0"><i class="fa-solid fa-graduation-cap"></i></p>
-                                    <p class="m-0 mb-1" style="margin-top: -5px !important"><strong>Educazione</strong></p>
-                                    <p class="m-0">Università Pegaso (in corso)</p>
-                                    <p class="m-0">Boolean Careers</p>
-                                    <p class="m-0">Harvard University - CS50</p>
+                                <p class="m-0 mb-1">
+                                  <i class="fa-solid fa-graduation-cap"></i>
+                                  <strong>Educazione</strong>
+                                </p>
+                                <div id="carouselEdu" class="carousel slide bg-card rounded-3 change-border border-color p-4">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <a href="https://www.unipegaso.it/" target="blank" title="Pegaso">
+                                        <img src="img/edu1.jpg" class="text-inline-block text-center rounded-2" alt="Pegaso" style="width: 70px; height: 70px; object-fit: contain">
+                                      <div class="text-inline-block mt-2">
+                                        Luglio 2024 - Presente <br>
+                                        Laurea triennale in informatica
+                                      </div>
+                                      </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                      <a href="https://cs50.harvard.edu/web/2020/" target="blank" title="Harvard University - CS50W">
+                                        <img src="img/edu3.png" class="text-inline-block text-center rounded-2 bg-white" alt="CS50W" style="width: 70px; height: 70px; object-fit: contain">
+                                      <div class="text-inline-block mt-2">
+                                        Settembre 2023 - Gennaio 2024 <br>
+                                        Corso Python Web Developer
+                                      </div>
+                                      </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                      <a href="https://boolean.careers/" target="blank" title="Boolean careers">
+                                        <img src="img/edu2.png" class="text-inline-block text-center rounded-2" alt="Boolean" style="width: 70px; height: 70px; object-fit: contain">
+                                      <div class="text-inline-block mt-2">
+                                        Novembre 2022 - Maggio 2023 <br>
+                                        Master FullStack Web Developer
+                                      </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselEdu" data-bs-slide="prev">
+                                    <span class="fs-2" aria-hidden="true"><i class="fa-solid fa-angle-left"></i></span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselEdu" data-bs-slide="next">
+                                    <span class="fs-2" aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
+                                  </button>
                                 </div>
                             </div>
                         </div>
 
                          <p class="fs-5" data-aos="fade-up" data-aos-duration="1000">
-                            Ciao, sono Federico, sviluppatore full stack con
-                            esperienza nella progettazione di applicazioni web e
+                            Ciao, sono Federico, sviluppatore full stack con 
+                            <span class="m-0" id="years">x anni</span> e <span class="m-0" id="months">x mesi</span>
+                            di esperienza nella progettazione di applicazioni web e
                             sistemi backend. Attualmente lavoro con Ruby e il
-                            framework Ruby on Rails, oltre a Node.js e Python
+                            framework Ruby on Rails per il web development, oltre a Node.js e Python
                             per lo sviluppo di microservizi. Ho competenze anche
                             in altri linguaggi e framework come Vue.js e PHP.
                             Sul mio sito web puoi trovare una panoramica
@@ -168,12 +225,12 @@
  
              <!-- sezione 3: skills -->
         <section id="skills" class=" reveal">
-            <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-3" >SKILLS</h2>
+            <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-3" data-id="skills">SKILLS</h2>
 
             <div class="container">
                 <div class="mb-3 my-clouds content-tech">
                     <div class="w-50 p-3 text-center" data-aos="fade-up" data-aos-duration="500">
-                        <div class="rounded-5 border-color bg-card change-border py-3" >
+                        <div class="rounded-4 border-color bg-card change-border py-3" >
                             <h3><i class="fa-solid fa-code"></i></h3>
                             <h4>Front-end</h4>
                             <div class="list-languages">
@@ -200,6 +257,9 @@
                                       <div class="col">
                                         <div class="py-3"> <strong></i>Vue.js</strong><em class="d-block text-secondary"><i class="devicon-vuejs-plain devicon colored"></i></em></div>
                                       </div>
+                                      <!-- <div class="col"> -->
+                                      <!--   <div class="py-3"> <strong></i>React js</strong><em class="d-block text-secondary"><i class="devicon-react-plain devicon colored"></i></em></div> -->
+                                      <!-- </div> -->
                                     </div>
                                   </div>
                             </div>
@@ -207,7 +267,7 @@
                     </div>
 
                     <div class="w-50 p-3 text-center" data-aos="fade-up" data-aos-duration="1000" >
-                        <div class="rounded-5 border-color bg-card change-border py-3">
+                        <div class="rounded-4 border-color bg-card change-border py-3">
                             <h3><i class="fa-solid fa-database"></i></h3>
                             <h4>Back-end</h4>
                             <div class="list-languages">
@@ -244,7 +304,7 @@
                     </div>
                 </div>
                 <div class="w-100 p-3 text-center" data-aos="fade-up" data-aos-duration="1000" >
-                    <div class="rounded-5 border-color bg-card change-border py-3">
+                    <div class="rounded-4 border-color bg-card change-border py-3">
                         <h3><i class="fa-solid fa-laptop"></i></h3>
                         <h4>Tools</h4>
                         <div class="list-languages">
@@ -290,7 +350,7 @@
 
             <!-- sezione 4: projects -->
             <section id="projects" class="reveal">
-                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-5" >PROGETTI</h2>
+                <h2 data-aos="fade-up" data-aos-duration="1000" class="text-center mb-5" data-id="projects">PROGETTI</h2>
                 
                 <div class="container">
                     <div class="row g-3 row-cols-1 row-cols-lg-2 justify-content-center">
@@ -472,7 +532,7 @@
        
         <!-- sezione 5: contact me -->
         <section id="contact-me" class="position-relative">
-            <h2 class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000">CONTATTI</h2>
+            <h2 class="text-center mb-4" data-aos="fade-up" data-aos-duration="1000" data-id="contact-me">CONTATTI</h2>
 
             <div class="text-center pb-5">
                 <div class="border-color bg-card rounded-5 d-inline-block p-3" data-aos="fade-up" data-aos-duration="1000">

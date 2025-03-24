@@ -21,7 +21,7 @@
 .border-color{
     border: 1px solid var(--bg-cards);
 }
-a{
+a, .carousel span{
     text-decoration: none !important;
     color: var(--text) !important;
 }
@@ -123,12 +123,11 @@ nav > ul{
 .socials-jumbo a{
     display: inline-block;
 	border: 2px solid var(--secondary);
-    margin-bottom: 1rem;
     color: var(--secondary) !important;
     font-weight: bold;
     height: 40px;
     width: 40px;
-    line-height: 40px;
+    line-height: 37px;
     transition: all 0.1s !important;
 }
 .socials-jumbo a:hover{
