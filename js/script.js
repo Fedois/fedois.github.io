@@ -1,8 +1,4 @@
 // componenti html utilizzabili da tutti gli scoped
-const header = document.querySelector('.header-links');
-const navigation = document.querySelector('.navigation > ul')
-const info = document.querySelector('.info-me');
-const socials = document.querySelectorAll('.socials-jumbo a');
 const root = document.documentElement
 const link = document.querySelectorAll('.link-page');
 let changeColor = localStorage.getItem('dark-mode') ? localStorage.getItem('dark-mode') : 'true';
@@ -13,12 +9,14 @@ const start_date = new Date('05/15/2023')
 const current_date = new Date()
 let calc_years = current_date.getFullYear() - start_date.getFullYear()
 let calc_months = current_date.getMonth() - start_date.getMonth()
+
 if (calc_months < 0){
     calc_years--
     calc_months += 12
 }
-document.getElementById('years').innerHTML = calc_years+' anni'
-document.getElementById('months').innerHTML = calc_months+' mesi'
+document.getElementById('years').innerHTML = calc_years+' ann'+(calc_years > 1 ? 'i' : 'o')
+if (calc_months !== 0)
+    document.getElementById('months').innerHTML = ' e '+calc_months+' mes'+(calc_months > 1 ? 'i' : 'e')
 
 // impostazioni scroll
 document.addEventListener('scroll', function(){
@@ -155,7 +153,7 @@ sections.forEach(section => observer.observe(section));
 // FUNZIONI
 function firstTheme(root){
     document.querySelector('.dark-mode i').className = 'fa-solid fa-toggle-on'
-    root.style.setProperty('--primary', 'rgba(19,19,19,0.8)');
+    root.style.setProperty('--primary', 'rgba(19,19,19,0.7)');
     root.style.setProperty('--secondary', 'white');
     root.style.setProperty('--text', '#262626');
     root.style.setProperty('--bg-cards', 'rgb(245, 243, 243)');
@@ -165,7 +163,7 @@ function firstTheme(root){
 
 function secondTheme(root){
     document.querySelector('.dark-mode i').className = 'fa-solid fa-toggle-off'
-    root.style.setProperty('--primary', 'rgba(255,255,255,0.6)');
+    root.style.setProperty('--primary', 'rgba(255,255,255,0.5)');
     root.style.setProperty('--secondary', '#1c1c1c');
     root.style.setProperty('--text', '#e0e0e0');
     root.style.setProperty('--bg-cards', '#151515');
