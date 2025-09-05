@@ -9,40 +9,6 @@ function NavBar(){
         { title: "contatti", href: "contact-me", icon: "fa-regular fa-paper-plane" },
     ];
 
-    useEffect(()=>{
-        document.addEventListener('scroll', function(){
-            let scroll = window.scrollY;
-
-            // change color navigation
-            if(changeColor == 'true'){
-                if(scroll > 500){
-                    localStorage.setItem('scroll', '500')
-                    for (let i = 0; i < link.length; i++) {
-                        link[i].style.setProperty('color', 'var(--primary)', 'important');
-                    }
-                } else{
-                    localStorage.setItem('scroll', '0')
-                    for (let i = 0; i < link.length; i++) {
-                        link[i].style.setProperty('color', 'var(--secondary)', 'important');
-                    }
-                }
-            } else{
-                if(scroll > 500){
-                    localStorage.setItem('scroll', '500')
-                    for (let i = 0; i < link.length; i++) {
-                        link[i].style.setProperty('color', 'var(--text)', 'important');
-                    }
-                    
-                } else{
-                    localStorage.setItem('scroll', '0')
-                    for (let i = 0; i < link.length; i++) {
-                        link[i].style.setProperty('color', 'var(--secondary)', 'important');
-                    }
-                }
-            }
-        })
-    }, [])
-
     return(
         <div className="header-links rounded-5">
         <div className="h-100 w-100">
