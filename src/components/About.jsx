@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 function About(){
     const [years, setYears] = useState(0)
     const experiences = [
-        {title: 'Rubycon Italy', logo: 'job3.jpg', date: 'Luglio 2025 - Presente', role: 'Co-Fonder & Co-Organizer', href:'https://www.rubycon.it/'},
+        {title: 'Rubycon Italy', logo: 'job3.jpg', date: 'Luglio 2025 - Presente', role: 'Co-Founder & Co-Organizer', href:'https://www.rubycon.it/'},
         {title: 'Wide Group', logo: 'job1.png', date: 'Aprile 2025 - Presente', role: 'Full Stack Developer', href: 'https://www.widegroup.eu/'},
         {title: 'Rubycon Italy', logo: 'job2.png', date: 'Maggio 2023 - Aprile 2025', role: 'Full Stack Developer', classes: 'bg-white', href: 'https://engim.eu/'},
     ]
