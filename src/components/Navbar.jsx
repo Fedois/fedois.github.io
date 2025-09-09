@@ -9,6 +9,25 @@ function NavBar(){
         { title: "contatti", href: "contact-me", icon: "fa-regular fa-paper-plane" },
     ];
 
+    useEffect(()=> {
+        const link = document.querySelectorAll('.link-page');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                // Se la sezione è visibile
+                if (entry.isIntersecting) {
+                    link.forEach(link => link.classList.remove('active'));
+                    document.querySelector(`a[href="#${entry.target.attributes['data-id'].nodeValue}"]`).classList.add('active')
+                }
+                });
+            },
+            {
+                threshold: 1
+            }
+        );
+        document.querySelectorAll('section h2').forEach(section => observer.observe(section));
+    }, [])
+
     return(
         <div className="header-links rounded-5">
         <div className="h-100 w-100">

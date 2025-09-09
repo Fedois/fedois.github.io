@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react"
+
 function About(){
+    const [years, setYears] = useState(0)
     const experiences = [
         {title: 'Rubycon Italy', logo: 'job3.jpg', date: 'Luglio 2025 - Presente', role: 'Co-Fonder & Co-Organizer', href:'https://www.rubycon.it/'},
         {title: 'Wide Group', logo: 'job1.png', date: 'Aprile 2025 - Presente', role: 'Full Stack Developer', href: 'https://www.widegroup.eu/'},
@@ -9,6 +12,18 @@ function About(){
         {title: 'CS50W', logo: 'edu3.png', date: 'Settembre 3 - Gennaio 2024', role: 'Corso Python Web Developer', classes: 'bg-white', href: 'https://cs50.harvard.edu/web/2020/'},
         {title: 'Boolean Careers', logo: 'edu2.png', date: 'Novembre 2022 - Maggio 2023', role: 'Master Full Stack Web Developer', href: 'https://boolean.careers/'},
     ]
+
+    useEffect(()=> {
+        const start_date = new Date('05/15/2023')
+        const current_date = new Date()
+        let calc_years = current_date.getFullYear() - start_date.getFullYear()
+        let calc_months = current_date.getMonth() - start_date.getMonth()
+
+        if (calc_months < 0){
+            calc_years--
+        }
+        setYears(calc_years)
+    }, [])
 
     const Card = (props) => (
         <div className="w-50 p-3 text-center">
@@ -57,7 +72,7 @@ function About(){
 
                     <p className="fs-5" data-aos="fade-up" data-aos-duration="1000">
                         Ciao, sono Federico, sviluppatore full stack con
-                        <span id="years"></span><span id="months"></span>
+                        +{years} anni
                         di esperienza nella progettazione di applicazioni
                         web e sistemi backend. <br/><br/>Attualmente mi occupo
                         di sviluppo backend con Ruby e il framework Ruby on
