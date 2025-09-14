@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function NavBar(){
     const links = [
@@ -8,21 +8,18 @@ function NavBar(){
         { title: "progetti", href: "projects", icon: "fa-regular fa-folder-open" },
         { title: "contatti", href: "contact-me", icon: "fa-regular fa-paper-plane" },
     ];
+    const [activeLink, setActiveLink] = useState(links[0].href)
 
     useEffect(()=> {
-        const link = document.querySelectorAll('.link-page');
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    link.forEach(link => link.classList.remove('active'));
-                    document.querySelector(`a[href="#${entry.target.attributes['data-id'].nodeValue}"]`).classList.add('active')
+                    setActiveLink(entry.target.attributes['data-id'].nodeValue)
                 }
                 });
             },
-            {
-                threshold: 1
-            }
+            { threshold: 1 }
         );
         document.querySelectorAll('section h2').forEach(section => observer.observe(section));
     }, [])
@@ -34,7 +31,7 @@ function NavBar(){
                 <ul className="m-0 p-0 d-flex justify-content-center align-items-center">
                     {links.map((link, index) => (
                         <li key={index} className="text-center p-2">
-                            <a title={link.title} className="link-page" href={`#${link.href}`}>
+                            <a title={link.title} className={`link-page ${link.href === activeLink ? 'active' : ''}`} href={`#${link.href}`}>
                                 <i className={link.icon}></i>
                             </a>
                         </li>
