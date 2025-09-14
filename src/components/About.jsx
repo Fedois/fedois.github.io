@@ -39,7 +39,7 @@ function About(){
                     <div className={`carousel-item ${index === 0 ? 'active' : null}`} key={index}>
                         <a href={d.href} target="blank" className="d-block">
                             <h6>{d.title}</h6>
-                            <img src={'../public/img/'+d.logo} className={`text-inline-block text-center rounded-2 ${d.classes || ''}`} alt="Wide Group"
+                            <img src={'/img/'+d.logo} className={`text-inline-block text-center rounded-2 ${d.classes || ''}`} alt="Wide Group"
                                 style={{width: "70px", height: "70px", objectFit: "contain"}}/>
                             <div className="text-inline-block mt-2">
                                 {d.date} <br/> {d.role}

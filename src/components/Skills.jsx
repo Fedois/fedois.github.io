@@ -21,15 +21,15 @@ function Skills(){
     ]
     const tools =  [
     { name: "VSCode", icon: "devicon-vscode-plain colored" },
-    { name: "Jetbrains", icon: "../public/img/icon_jetbrains.png", "type": "img" },
+    { name: "Jetbrains", icon: "/img/icon_jetbrains.png", "type": "img" },
     { name: "Neovim", icon: "devicon-neovim-plain colored" },
-    { name: "MAMP", icon: "../public/img/icon_mamp.png", "type": "img" },
+    { name: "MAMP", icon: "/img/icon_mamp.png", "type": "img" },
     { name: "Postman", icon: "devicon-postman-plain colored" },
     { name: "Git", icon: "devicon-git-plain colored" },
     { name: "GitHub", icon: "devicon-github-original" },
     { name: "GitLab", icon: "devicon-gitlab-plain colored" },
     { name: "Ubuntu", icon: "devicon-ubuntu-plain colored" },
-    { name: "Microsoft", icon: "../public/img/icon_microsoft.png", "type": "img" }
+    { name: "Microsoft", icon: "/img/icon_microsoft.png", "type": "img" }
     ]
 
     return(

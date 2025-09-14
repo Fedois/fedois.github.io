@@ -3,7 +3,7 @@ function Projects(){
     {
         title: "RubyCon Italy",
         link: "https://rubycon.it",
-        image: "../public/img/rubycon.png",
+        image: "/img/rubycon.png",
         github: "https://github.com/Fedois/htmlcss-dropbox",
         description: `Ho contribuito alla realizzazione del sito ufficiale di RubyCon, la principale conferenza italiana dedicata alla community Ruby. 
     Il sito è stato sviluppato con Jekyll e include: design responsive realizzato con TailwindCSS, animazioni fluide tramite AOS (Animate on Scroll),
@@ -13,7 +13,7 @@ function Projects(){
     {
         title: "PersonalDiary",
         link: null,
-        image: "../public/img/personaldiary.jpeg",
+        image: "/img/personaldiary.jpeg",
         github: "https://github.com/Fedois/htmlcss-dropbox",
         description: `Applicazione web responsive che offre agli utenti la possibilità di creare diari personali e di gestire elenchi di compiti. 
     Per la sua realizzazione ho utilizzato Django, un framework di sviluppo web basato su Python, insieme a JavaScript. 
@@ -24,7 +24,7 @@ function Projects(){
     {
         title: "Booking",
         link: null,
-        image: "../public/img/boolbnb.png",
+        image: "/img/boolbnb.png",
         github: "https://github.com/Chiaravalle04/boolbnb_be",
         description: `Replica di un sistema di prenotazione con la collaborazione di un team, con l'obiettivo di creare
     una piattaforma web che consente agli utenti di prenotare servizi o risorse in modo efficiente e intuitivo.
@@ -35,7 +35,7 @@ function Projects(){
     {
         title: "Phlox",
         link: null,
-        image: "../public/img/agency.png",
+        image: "/img/agency.png",
         github: "https://github.com/Fedois/proj-html-vuejs",
         description: `Creazione di un sito web di una azienda, utilizzando un insieme di tecnologie web tra cui HTML5, CSS3, JavaScript, Sass, Vue.js e Vite.js. 
     Durante il progetto, ho creato un sito web con un design moderno e accattivante, caratterizzato da una navigazione intuitiva e facile da usare. 
@@ -45,7 +45,7 @@ function Projects(){
     {
         title: "Netflix",
         link: null,
-        image: "../public/img/boolflix.png",
+        image: "/img/boolflix.png",
         github: "https://github.com/Fedois/vite-boolflix",
         description: `Creazione di una piattaforma di streaming video simile a Netflix, concentrandoci sull'utilizzo di chiamate Axios per recuperare i dati dei film e serie-tv dal server remoto. 
     Ho utilizzato tecnologie come HTML5, CSS3, JavaScript, Axios, Vue.js e Node.js per creare una piattaforma reattiva, scalabile e sicura.`,

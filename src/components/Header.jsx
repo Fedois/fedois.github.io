@@ -124,7 +124,7 @@ function Header() {
               <img
                 className="photo-jumbo rounded-circle object-fit-cover"
                 alt=""
-                src="../../public/img/profile_jumbotron.jpg"
+                src="/img/profile_jumbotron.jpg"
               />
               <span
                 className="text-center p-2 dark-mode position-absolute top-0 end-0"
