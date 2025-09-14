@@ -22,6 +22,8 @@ function NavBar(){
             { threshold: 1 }
         );
         document.querySelectorAll('section h2').forEach(section => observer.observe(section));
+
+        return () => observer.disconnect();
     }, [])
 
     return(
