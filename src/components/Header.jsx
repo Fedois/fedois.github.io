@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ReactTyped } from "react-typed";
 
 function firstTheme(root){
@@ -23,14 +23,15 @@ function secondTheme(root){
 
 
 function Header() {
-  const [darkMode, setDarkMode] = useState(localStorage.getItem('dark-mode') === 'true' ? false : true)
-  const social = [
+  console.log('rendered')
+  const [darkMode, setDarkMode] = useState(localStorage.getItem('dark-mode') === 'true')
+  const social = [  
         {icon: 'github', url: 'https://github.com/Fedois'},
         {icon: 'instagram', url: 'https://www.instagram.com/fedois_/'},
         {icon: 'linkedin-in', url: 'https://www.linkedin.com/in/federicofois'},
   ]
 
-  const scrollOption = ()=> {
+  const scrollOption = useCallback(()=> {
     const link = document.querySelectorAll('.link-page');
       let scroll = window.scrollY;
 
@@ -60,7 +61,7 @@ function Header() {
               }
           }
       }
-  }
+  }, [])
 
   useEffect(()=> {
     localStorage.setItem('dark-mode', darkMode)
@@ -68,7 +69,7 @@ function Header() {
     darkMode ? firstTheme(root) : secondTheme(root)
 
     document.addEventListener('scroll', scrollOption)
-    return ()=> (document.removeEventListener('scroll', scrollOption))
+    return ()=> {document.removeEventListener('scroll', scrollOption)}
   }, [darkMode])
 
   return (

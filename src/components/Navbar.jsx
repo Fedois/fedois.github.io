@@ -14,7 +14,6 @@ function NavBar(){
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
-                // Se la sezione è visibile
                 if (entry.isIntersecting) {
                     link.forEach(link => link.classList.remove('active'));
                     document.querySelector(`a[href="#${entry.target.attributes['data-id'].nodeValue}"]`).classList.add('active')
