@@ -80,7 +80,7 @@ function About(){
                         dello sviluppo di microservizi basati su Node.js e
                         Python, e ho competenze anche in altri linguaggi e
                         framework come Vue.js e PHP.<br/><br/>Sono inoltre
-                        co-founder e co-organizer di RubyCon Italia, la
+                        co-founder e co-organizer di Rubycon Italy, la
                         principale conferenza italiana dedicata alla
                         community Ruby, per la quale ho contribuito allo
                         sviluppo e alla gestione di esso.<br/><br/> Sul mio

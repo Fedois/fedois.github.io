@@ -1,7 +1,7 @@
 function Projects(){
     const projects = [
     {
-        title: "RubyCon Italy",
+        title: "Rubycon Italy",
         link: "https://rubycon.it",
         image: "/img/rubycon.png",
         github: "https://github.com/Fedois/htmlcss-dropbox",
