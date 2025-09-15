@@ -28,7 +28,6 @@ function About(){
     const Card = (props) => (
         <div className="w-50 p-3 text-center">
             <p className="m-0 mb-1">
-                <i className="fa-solid fa-briefcase"></i>
                 <strong>{props.title}</strong>
             </p>
             <div id={'carousel'+props.title} className="carousel slide bg-card rounded-3 change-border border-color px-4 py-3">
