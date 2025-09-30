@@ -23,7 +23,6 @@ function secondTheme(root){
 
 
 function Header() {
-  console.log('rendered')
   const [darkMode, setDarkMode] = useState(localStorage.getItem('dark-mode') === 'true')
   const social = [  
         {icon: 'github', url: 'https://github.com/Fedois'},
@@ -33,34 +32,20 @@ function Header() {
 
   const scrollOption = useCallback(()=> {
     const link = document.querySelectorAll('.link-page');
-      let scroll = window.scrollY;
+    const scroll = window.scrollY;
+    const color = darkMode ? 'var(--primary)' : 'var(--text)'
 
-      if(darkMode){
-          if(scroll > 500){
-              localStorage.setItem('scroll', '500')
-              for (let i = 0; i < link.length; i++) {
-                  link[i].style.setProperty('color', 'var(--primary)', 'important');
-              }
-          } else{
-              localStorage.setItem('scroll', '0')
-              for (let i = 0; i < link.length; i++) {
-                  link[i].style.setProperty('color', 'var(--secondary)', 'important');
-              }
-          }
-      } else{
-          if(scroll > 500){
-              localStorage.setItem('scroll', '500')
-              for (let i = 0; i < link.length; i++) {
-                  link[i].style.setProperty('color', 'var(--text)', 'important');
-              }
-              
-          } else{
-              localStorage.setItem('scroll', '0')
-              for (let i = 0; i < link.length; i++) {
-                  link[i].style.setProperty('color', 'var(--secondary)', 'important');
-              }
-          }
-      }
+    if(scroll > 500){
+        localStorage.setItem('scroll', '500')
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.setProperty('color', color, 'important');
+        }
+    } else{
+        localStorage.setItem('scroll', '0')
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.setProperty('color', 'var(--secondary)', 'important');
+        }
+    }
   }, [])
 
   useEffect(()=> {
@@ -69,7 +54,7 @@ function Header() {
     darkMode ? firstTheme(root) : secondTheme(root)
 
     document.addEventListener('scroll', scrollOption)
-    return ()=> {document.removeEventListener('scroll', scrollOption)}
+    return () => {document.removeEventListener('scroll', scrollOption)}
   }, [darkMode])
 
   return (
