@@ -3,9 +3,9 @@ import { useEffect, useState } from "react"
 function About(){
     const [years, setYears] = useState(0)
     const experiences = [
-        {title: 'Rubycon Italy', logo: 'job3.jpg', date: 'Luglio 2025 - Presente', role: 'Co-Founder & Co-Organizer', href:'https://www.rubycon.it/'},
+        {title: 'Rubycon Italy', logo: 'job3.jpg', date: 'Luglio 2025 - Presente', role: 'Co-founder & Co-organizer', href:'https://www.rubycon.it/'},
         {title: 'Wide Group', logo: 'job1.png', date: 'Aprile 2025 - Presente', role: 'Full Stack Developer', href: 'https://www.widegroup.eu/'},
-        {title: 'Rubycon Italy', logo: 'job2.png', date: 'Maggio 2023 - Aprile 2025', role: 'Full Stack Developer', classes: 'bg-white', href: 'https://engim.eu/'},
+        {title: 'ENGIM', logo: 'job2.png', date: 'Maggio 2023 - Aprile 2025', role: 'Full Stack Developer', classes: 'bg-white', href: 'https://engim.eu/'},
     ]
     const educations = [
         {title: 'Università Pegaso', logo: 'edu1.jpg', date: 'Agosto 2025 - Presente', role: 'Laurea triennale in informatica', href: 'https://www.unipegaso.it/'},
@@ -65,7 +65,7 @@ function About(){
             <div className="container d-flex align-items-center" >
                 <div className="info-me">
                     <div className="mb-3 my-clouds my-experiences" data-aos="fade-up" data-aos-duration="1000" >
-                        <Card title="Esperienze" data={experiences}/>
+                        <Card title="Esperienza" data={experiences}/>
                         <Card title="Educazione" data={educations} />
                     </div>
 
@@ -79,7 +79,7 @@ function About(){
                         dello sviluppo di microservizi basati su Node.js e
                         Python, e ho competenze anche in altri linguaggi e
                         framework come Vue.js e PHP.<br/><br/>Sono inoltre
-                        co-founder e co-organizer di Rubycon Italy, la
+                        Co-founder e Co-organizer di Rubycon Italy, la
                         principale conferenza italiana dedicata alla
                         community Ruby, per la quale ho contribuito allo
                         sviluppo e alla gestione di esso.<br/><br/> Sul mio
