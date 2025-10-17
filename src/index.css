@@ -139,6 +139,7 @@ nav > ul{
     height: 350px;
     margin-left: 8rem;
     animation: revealText 1.5s linear;
+    object-position: bottom;
 }
 
 /* MAIN */
