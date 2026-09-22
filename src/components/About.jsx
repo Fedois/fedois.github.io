@@ -8,7 +8,7 @@ function About(){
         {title: 'ENGIM', logo: 'job2.png', date: 'Maggio 2023 - Aprile 2025', role: 'Full Stack Developer', classes: 'bg-white', href: 'https://engim.eu/'},
     ]
     const educations = [
-        {title: 'Università Pegaso', logo: 'edu1.jpg', date: 'Agosto 2025 - Presente', role: 'Laurea triennale in informatica', href: 'https://www.unipegaso.it/'},
+        {title: 'Università Pegaso', logo: 'edu1.jpg', date: 'Agosto 2024 - Presente', role: 'Laurea triennale in informatica', href: 'https://www.unipegaso.it/'},
         {title: 'CS50W', logo: 'edu3.png', date: 'Settembre 2023 - Gennaio 2024', role: 'Corso Python Web Developer', classes: 'bg-white', href: 'https://cs50.harvard.edu/web/2020/'},
         {title: 'Boolean Careers', logo: 'edu2.png', date: 'Novembre 2022 - Maggio 2023', role: 'Master Full Stack Web Developer', href: 'https://boolean.careers/'},
     ]
